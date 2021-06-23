@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour {
 	[SerializeField]
 	private bool playerDetected;
 	private NavMeshAgent nav;
+	private float dist=0;
 
 	void Start () {
 
@@ -46,38 +47,25 @@ public class Enemy : MonoBehaviour {
 		if (target == null) {
 			target = GameObject.FindGameObjectWithTag ("Player").transform;
 		}
-		pathfinder.enabled = true;
-		NavMeshHit hit;
+		//pathfinder.enabled = true;
+		
+		/*NavMeshHit hit;
 		if (NavMesh.SamplePosition(target.position, out hit, 1.0f, NavMesh.AllAreas)) {
 			transform.position = hit.position;
-		}
-		//pathfinder.SetDestination (transform.position);
-		pathfinder.enabled = false;
-		Vector3 targetPosition = transform.position;
+		}*/
+
+		dist = 1000f;
 		while (target != null) {
 
 
-
-
-			if (playerDetected) {
-				targetPosition = new Vector3 (target.position.x, 0, target.position.z);
-				pathfinder.SetDestination (targetPosition);
-			}else {
-				if (Vector3.Distance (transform.position, target.transform.position) < 5) {
-					pathfinder.enabled = true;
-					target = GameObject.FindGameObjectWithTag ("Player").transform;
-					playerDetected = true;
-					targetPosition = new Vector3 (target.position.x, 0, target.position.z);
-				} else {
-					Debug.Log ("Player not detected.");
+				dist = Vector3.Distance(transform.position, target.transform.position);
+				Debug.Log("dist is " + dist);
+				if (dist < 6) {
+					//playerDetected = true;
+					pathfinder.SetDestination(target.position);
 				}
 
-
-
-			}
 			yield return new WaitForSeconds (refreshRate);
-
-
 		}
 	}
 }

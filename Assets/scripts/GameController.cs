@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using DeltaDNA;
 
 // Reference the Unity Analytics namespace
 using UnityEngine.Analytics;
@@ -29,13 +28,8 @@ public class GameController : MonoBehaviour {
 	int playerHP;
 
 	void Start() {
-		DDNA.Instance.StartSDK(
-			"38858906661194912401889469715179",
-			"https://collect12996lghtr.deltadna.net/collect/api",
-			"https://engage12996lghtr.deltadna.net"
-		);
 
-		//UpdateDeltaDNAStartLevel ();
+
 		pname = PlayerPrefs.GetString("name").ToString();
 		getHealthMultiplier = Player.GetComponent<vp_SimpleHUD> ();
 		m_Player = Player.GetComponent<vp_FPPlayerEventHandler>();
@@ -85,7 +79,6 @@ public class GameController : MonoBehaviour {
 	public void LevelFinished(){
 		save ();
 		//UpdateAnalytics ();
-		UpdateDeltaDNAEndLevel ();
 		//Debug.Break ();
 
 		int active_scene = SceneManager.GetActiveScene().buildIndex;
@@ -106,30 +99,6 @@ public class GameController : MonoBehaviour {
 		PlayerPrefs.SetInt("health", playerHP);
 	}
 		
-	void UpdateDeltaDNAStartLevel (){
-		// Build some event parameters
-		GameEvent missionStartedEvent = new GameEvent ("missionStarted")
-			.AddParam ("missionName", "Level 01")
-			.AddParam ("missionID", "001")
-			.AddParam ("isTutorial", false);
-
-		// Record the missionStarted event event with some parameters
-		DDNA.Instance.RecordEvent(missionStartedEvent);
-	}
-
-	void UpdateDeltaDNAEndLevel (){
-		// Build some event parameters
-		GameEvent missionCompleted= new GameEvent("missionCompleted")
-			.AddParam("missionName", "Level 01")
-			.AddParam("missionDifficulty", "EASY")
-			.AddParam("missionID",(minutes*60)+60)
-			.AddParam("userXP",experience)
-			.AddParam("missionID","001")
-			.AddParam("isTutorial", false);
-
-		// Record the missionStarted event event with some parameters
-		DDNA.Instance.RecordEvent(missionCompleted);
-	}
 
 	void UpdateAnalytics(){
 		Debug.Log ("Updating analytics");

@@ -5,17 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public GameObject gc;
-	private vp_FPPlayerEventHandler m_Player = null;
+	private  vp_FPPlayerEventHandler m_Player = null;
 	int saved_health;
 
 	void Awake(){
 		
 		gc = GameObject.FindGameObjectWithTag ("GameController");
 		saved_health = PlayerPrefs.GetInt("health");
-		Debug.Log("Health in player : " + PlayerPrefs.GetInt("health"));
+		//Debug.Log("Health in player : " + PlayerPrefs.GetInt("health"));
 
 		m_Player = GetComponent<vp_FPPlayerEventHandler> ();
-		Debug.Log ("Event handler is " + m_Player);
+		//Debug.Log ("Event handler is " + m_Player);
 		//m_Player = player_object.GetComponentInChildren<vp_FPPlayerEventHandler> ();
 		if (saved_health == 0) {
 		} else {

@@ -1,0 +1,1405 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1052; Version 2009; 64bit' Language: 'en' Physical Memory: 16260 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/Unity/Unity Projects/Lightrunner/Lightrunner
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54523
+Successfully changed project path to: E:/Unity/Unity Projects/Lightrunner/Lightrunner
+E:/Unity/Unity Projects/Lightrunner/Lightrunner
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 72.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Unity/Unity Projects/Lightrunner/Lightrunner/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   
+    VRAM:     4043 MB
+    Driver:   27.21.14.6089
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001688 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 56.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.753 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005877 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.134 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.1 MB.
+System memory in use after: 96.3 MB.
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 2697.
+Total: 5.015200 ms (FindLiveObjects: 0.192200 ms CreateObjectMapping: 0.104800 ms MarkObjects: 4.630400 ms  DeleteObjects: 0.086700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/UFPS/Base/Content/Art/Effects/Shells/Shell.FBX
+  artifactKey: Guid(6d8e4404575c26b4caed46fd23dd4b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Shells/Shell.FBX using Guid(6d8e4404575c26b4caed46fd23dd4b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4945587625e0b5c716821ed0a1df4f49') in 0.109075 seconds 
+  Import took 0.112876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.783485 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Arm.mat
+  artifactKey: Guid(a1f7269746c3741c0abf91d87becb96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Arm.mat using Guid(a1f7269746c3741c0abf91d87becb96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1bc62fb4940c3f6714d3e3e1ccc70c') in 0.125758 seconds 
+  Import took 0.132399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Head.mat
+  artifactKey: Guid(cfacfbc2b631c49338aff883f6fed9cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Head.mat using Guid(cfacfbc2b631c49338aff883f6fed9cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbec8722ab574a73178f9c22a344f827') in 0.041077 seconds 
+  Import took 0.044881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Hero.mat
+  artifactKey: Guid(0250a74433ea1415cbfeee3d7be7eea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Models/Hero/Materials/Hero.mat using Guid(0250a74433ea1415cbfeee3d7be7eea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e789287aac3dfa1106cce91ceaa2028b') in 0.041512 seconds 
+  Import took 0.045361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.139395 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Models/Hero/Textures
+  artifactKey: Guid(9fd038bbe9298864e9743a9c03648970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Models/Hero/Textures using Guid(9fd038bbe9298864e9743a9c03648970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a23897674628c5df6d59e3f6de5533c') in 0.009857 seconds 
+  Import took 0.015370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.608089 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkBack.fbx
+  artifactKey: Guid(665a030bd0eda4073b9a696237b5af76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkBack.fbx using Guid(665a030bd0eda4073b9a696237b5af76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba62043295cae7c55af88c6580451d4') in 0.273540 seconds 
+  Import took 0.279083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightNoWield.FBX
+  artifactKey: Guid(13f067fea109b4861b2ae626bde6677f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightNoWield.FBX using Guid(13f067fea109b4861b2ae626bde6677f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f03a75576101bab634cffa5a7bff1345') in 0.010659 seconds 
+  Import took 0.014506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightOneHand.FBX
+  artifactKey: Guid(9beb16301d96244abb4fa7dd4dd45ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightOneHand.FBX using Guid(9beb16301d96244abb4fa7dd4dd45ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3086593b34947ee3e2c7e0edf396236b') in 0.013305 seconds 
+  Import took 0.017587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardNoWield.FBX
+  artifactKey: Guid(33587c8fa28e74062a8a1c550f3be7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardNoWield.FBX using Guid(33587c8fa28e74062a8a1c550f3be7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ef4d832ee0480b52a959d0e7275268') in 0.012265 seconds 
+  Import took 0.016067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardTwoHand.FBX
+  artifactKey: Guid(aef4282270e0449e5901213249cb2635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardTwoHand.FBX using Guid(aef4282270e0449e5901213249cb2635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8edb01ec4aeba825926241aa435a7bd3') in 0.010773 seconds 
+  Import took 0.014681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftOneHand.FBX
+  artifactKey: Guid(3514beff4a4594723a8ac8233f4fddce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftOneHand.FBX using Guid(3514beff4a4594723a8ac8233f4fddce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d6050c6d1e5a060041f62da7975486') in 0.011953 seconds 
+  Import took 0.015781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkForward.fbx
+  artifactKey: Guid(04f4c7cb5e9914c1aaff9215d330728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkForward.fbx using Guid(04f4c7cb5e9914c1aaff9215d330728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7858dc35ac47a666303c7f7a8585e4e') in 0.227058 seconds 
+  Import took 0.232429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftNoWield.FBX
+  artifactKey: Guid(131512004448549ec84c59648ee0cd24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftNoWield.FBX using Guid(131512004448549ec84c59648ee0cd24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee7b4df20bee8bd7477818b84cf1a913') in 0.012511 seconds 
+  Import took 0.016735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardTwoHand.FBX
+  artifactKey: Guid(37b50ec85c0aa43aea0e5719c9ecd875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardTwoHand.FBX using Guid(37b50ec85c0aa43aea0e5719c9ecd875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c2e3e338343e7ca318511ddaeb1857') in 0.012526 seconds 
+  Import took 0.016481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightTwoHand.FBX
+  artifactKey: Guid(1cb98f1a37d8640d48659a4d1cc102c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeRightTwoHand.FBX using Guid(1cb98f1a37d8640d48659a4d1cc102c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8093c5f88cf65b8a087377166e15ffae') in 0.013442 seconds 
+  Import took 0.017330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackandTurn.fbx
+  artifactKey: Guid(66e521740e4044e1b8a7fff5876160b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackandTurn.fbx using Guid(66e521740e4044e1b8a7fff5876160b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f36a5fe86dc1e913e993375ed5ca792') in 0.220831 seconds 
+  Import took 0.225326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardOneHand.FBX
+  artifactKey: Guid(9bc76de99693f4ab1bec90fda7a86250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardOneHand.FBX using Guid(9bc76de99693f4ab1bec90fda7a86250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86246bbda217276e96f748976f5cf13') in 0.012545 seconds 
+  Import took 0.016165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardOneHand.FBX
+  artifactKey: Guid(b80083f178d4a4a6d957d6e342950ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardOneHand.FBX using Guid(b80083f178d4a4a6d957d6e342950ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e0f73701a04d173f303868cce06665') in 0.012835 seconds 
+  Import took 0.016613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardTurns.fbx
+  artifactKey: Guid(568cdc2a12387419f9e264beb3ef0265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkForwardTurns.fbx using Guid(568cdc2a12387419f9e264beb3ef0265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67fa2c3a5f3de4b16a39b5b2974b3d26') in 0.243369 seconds 
+  Import took 0.247682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftTwoHand.FBX
+  artifactKey: Guid(bed6cefadf7380a4089a53b71dad6c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkStrafeLeftTwoHand.FBX using Guid(bed6cefadf7380a4089a53b71dad6c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0bfa7d7e72462340433cc12c1e61fb') in 0.012518 seconds 
+  Import took 0.016272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardNoWield.FBX
+  artifactKey: Guid(48ebe284c88604e288e38c9c22929580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Body/Animations/WalkBackwardNoWield.FBX using Guid(48ebe284c88604e288e38c9c22929580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd44573dfd5bc920f29804af0eba88e2b') in 0.011695 seconds 
+  Import took 0.015426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.856497 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletmetal.mat
+  artifactKey: Guid(16e37655ae1e3c042a44be30971aa30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletmetal.mat using Guid(16e37655ae1e3c042a44be30971aa30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a69dd950933bb4183e9b27ba29aedd') in 0.022716 seconds 
+  Import took 0.027190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/collisionsand.mat
+  artifactKey: Guid(45ae169e535b11f4b95759821a5d8cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/collisionsand.mat using Guid(45ae169e535b11f4b95759821a5d8cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa3863e662a454accc8a41758afcf475') in 0.028879 seconds 
+  Import took 0.032264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood4.mat
+  artifactKey: Guid(4b0c0038f472afd4aa6bb873403b61cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood4.mat using Guid(4b0c0038f472afd4aa6bb873403b61cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7ebbf425a3c576ae76a2ee1f634cd5') in 0.018355 seconds 
+  Import took 0.021827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/decal-01 - Default.mat
+  artifactKey: Guid(09b0aaca35f23644b92760989704ee59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/decal-01 - Default.mat using Guid(09b0aaca35f23644b92760989704ee59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75651338737c995abb9ea2ac63835495') in 0.039391 seconds 
+  Import took 0.042406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletmetalproj.mat
+  artifactKey: Guid(855cbf278c99b074bbef55eefa3d4985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletmetalproj.mat using Guid(855cbf278c99b074bbef55eefa3d4985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bea10e93141b140f780b7d19d819412') in 0.014661 seconds 
+  Import took 0.017962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/footprintgrass.mat
+  artifactKey: Guid(3477c98d3dd8ab149a14a81ba04afca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/footprintgrass.mat using Guid(3477c98d3dd8ab149a14a81ba04afca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7288e66aa61d91c9e81d54ad044c054e') in 0.026964 seconds 
+  Import took 0.030877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock2.mat
+  artifactKey: Guid(18486f70f2a5f2846b8df9aeb25b5780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock2.mat using Guid(18486f70f2a5f2846b8df9aeb25b5780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b6198c7ae24fe0ade56417e9da937a') in 0.018877 seconds 
+  Import took 0.022960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood1.mat
+  artifactKey: Guid(488114e32627b0241872e2e3911fb53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood1.mat using Guid(488114e32627b0241872e2e3911fb53d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8e6ed0edee393ccb1fad995611a7b8') in 0.015706 seconds 
+  Import took 0.020217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock4.mat
+  artifactKey: Guid(e5e0f5664992556489d3b327f75c3043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock4.mat using Guid(e5e0f5664992556489d3b327f75c3043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e88cbcd5c63fc7a708204fdbe9c6b3') in 0.015399 seconds 
+  Import took 0.019059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/fallImpact.mat
+  artifactKey: Guid(e75b2f6c7ea73504bb05887f8c615ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/fallImpact.mat using Guid(e75b2f6c7ea73504bb05887f8c615ad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '827869d13618b840b33ceadf66fa612f') in 0.020312 seconds 
+  Import took 0.025132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock1.mat
+  artifactKey: Guid(c6725dc63da7f45448aa9f0241b84a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock1.mat using Guid(c6725dc63da7f45448aa9f0241b84a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5f691b5615900c15baa20e6aa14a20c') in 0.014382 seconds 
+  Import took 0.017614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood3.mat
+  artifactKey: Guid(f7b4bb75b0e3ae24d88fc340bcb2b386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood3.mat using Guid(f7b4bb75b0e3ae24d88fc340bcb2b386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7de68214baea7756ef2903d6a7819f6') in 0.016129 seconds 
+  Import took 0.019659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/decal.mat
+  artifactKey: Guid(a57e9dd599572cc40adae07af1ec792d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/decal.mat using Guid(a57e9dd599572cc40adae07af1ec792d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2fc707b2042236cb35a2a6489b72861') in 0.046460 seconds 
+  Import took 0.050068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock3.mat
+  artifactKey: Guid(b8492441378be5246b6230f9fdd05643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletrock3.mat using Guid(b8492441378be5246b6230f9fdd05643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb80525260837c9898841683a4df28d') in 0.013588 seconds 
+  Import took 0.017548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Meshes/FootprintDecal.fbx
+  artifactKey: Guid(2d357c02630009040894e8c7740e9f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Meshes/FootprintDecal.fbx using Guid(2d357c02630009040894e8c7740e9f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68dd013deda8c8a1a21667dcf596d4c6') in 0.019609 seconds 
+  Import took 0.023455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Meshes/Decal.FBX
+  artifactKey: Guid(aaac8e865648df5429f6a667e2be461d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Meshes/Decal.FBX using Guid(aaac8e865648df5429f6a667e2be461d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d2c253a9e158e05d3b155ff168baf2d') in 0.019035 seconds 
+  Import took 0.022328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/footprintSand.mat
+  artifactKey: Guid(2c5753070322cad4b9de67580a6f2e9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/footprintSand.mat using Guid(2c5753070322cad4b9de67580a6f2e9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d826e3f487e82d4b179bf7c9d5c81a3') in 0.041876 seconds 
+  Import took 0.045245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood2.mat
+  artifactKey: Guid(2bbd88f0fd9b250459702f8baf1c01f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/bulletwood2.mat using Guid(2bbd88f0fd9b250459702f8baf1c01f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fabd6625b3417b6985a1c5f3663d336') in 0.011968 seconds 
+  Import took 0.015445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/shotgunpelletrock1.mat
+  artifactKey: Guid(cfa38304e5d888c4581d811306fffc33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Decals/Materials/shotgunpelletrock1.mat using Guid(cfa38304e5d888c4581d811306fffc33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7fcdabc1030a5a768103d05e0f3bcb') in 0.020105 seconds 
+  Import took 0.024019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.978414 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash-1.mat
+  artifactKey: Guid(fd16f7a1d3afa8248bf6451fe042be38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash-1.mat using Guid(fd16f7a1d3afa8248bf6451fe042be38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c07d538d03619aaadb50e9f32343d76') in 0.020902 seconds 
+  Import took 0.028104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash01-1.mat
+  artifactKey: Guid(da7e138a7e3b1c94c9c14265491402c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash01-1.mat using Guid(da7e138a7e3b1c94c9c14265491402c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e12904b73d486c900916795a8b66ac72') in 0.162840 seconds 
+  Import took 0.169168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash02-1.mat
+  artifactKey: Guid(86041ba8fe45ba14dbc3d6335f99a748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash02-1.mat using Guid(86041ba8fe45ba14dbc3d6335f99a748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8b4c759fe19817d7550824a231cd3d8') in 0.040414 seconds 
+  Import took 0.044535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlashl-1.mat
+  artifactKey: Guid(f0d853aa6d806bd4bb47991a51985ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlashl-1.mat using Guid(f0d853aa6d806bd4bb47991a51985ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceaca7a09c8e8aef39e768556a6029a1') in 0.027786 seconds 
+  Import took 0.031133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash-No Name.mat
+  artifactKey: Guid(2d1e87e15305e654fa98d62dd28d5931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash-No Name.mat using Guid(2d1e87e15305e654fa98d62dd28d5931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da375290d6db4db799a85ceddfebc6f4') in 0.046246 seconds 
+  Import took 0.049697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash02.mat
+  artifactKey: Guid(057a850026fa0ed4984726159fa7db20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash02.mat using Guid(057a850026fa0ed4984726159fa7db20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60762e44eac2502502ab0b4c336ceafc') in 0.018752 seconds 
+  Import took 0.022140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash03.mat
+  artifactKey: Guid(9c3d394c996d0d8469f464bbb24d17d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Materials/MuzzleFlash03.mat using Guid(9c3d394c996d0d8469f464bbb24d17d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95682ff72404dd3b8342f80f620335a7') in 0.011895 seconds 
+  Import took 0.015843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072566 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Meshes/MuzzleFlash.FBX
+  artifactKey: Guid(692ca2eaf609ac745bb1206eaffeac81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Meshes/MuzzleFlash.FBX using Guid(692ca2eaf609ac745bb1206eaffeac81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6b0ec4dc79f330b81a93212a5a1cfcc') in 0.056134 seconds 
+  Import took 0.060707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Meshes/MuzzleFlash02.FBX
+  artifactKey: Guid(1e2697b77b16cdd448b2a215bf4e00df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Mussleflashes/Meshes/MuzzleFlash02.FBX using Guid(1e2697b77b16cdd448b2a215bf4e00df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5b862f0e3181e3f9d7e80c85fbbe7b') in 0.018560 seconds 
+  Import took 0.022742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.320916 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/DamageFire.mat
+  artifactKey: Guid(032bf0540b515df409b4826360e4d1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/DamageFire.mat using Guid(032bf0540b515df409b4826360e4d1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f49cb31dff89ede3034f069f0cce8242') in 0.147544 seconds 
+  Import took 0.154514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/DamageSmoke.mat
+  artifactKey: Guid(9f1ef207442414b49a2f6d58674867aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/DamageSmoke.mat using Guid(9f1ef207442414b49a2f6d58674867aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e9a8b212cb3c3d2d7d8a506eff5f63') in 0.056666 seconds 
+  Import took 0.061475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Debris.mat
+  artifactKey: Guid(484b07dd0447cb440ade5582c0806cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Debris.mat using Guid(484b07dd0447cb440ade5582c0806cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad72b6149ea6530f6360cdc04f0f59b9') in 0.021253 seconds 
+  Import took 0.024439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Spark.mat
+  artifactKey: Guid(a828cc11aea6a8f4cae1e50b801b2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Spark.mat using Guid(a828cc11aea6a8f4cae1e50b801b2f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998f8d72e6d1d9c72b193e6c52257c81') in 0.034388 seconds 
+  Import took 0.037527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/FootstepDust.mat
+  artifactKey: Guid(f7f4c8dde1d135e41ad22ee3d38cf349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/FootstepDust.mat using Guid(f7f4c8dde1d135e41ad22ee3d38cf349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e78b6fcb3fd9c51c0e764785ebe88700') in 0.022537 seconds 
+  Import took 0.025827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Flash.mat
+  artifactKey: Guid(1c63df4f648126a42a2caf62db7ed8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Flash.mat using Guid(1c63df4f648126a42a2caf62db7ed8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '711081915c8dccdecd265c7e57beb74a') in 0.020267 seconds 
+  Import took 0.024421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/GrassParticle.mat
+  artifactKey: Guid(b8fe8da17269fcf45aa42ca718242b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/GrassParticle.mat using Guid(b8fe8da17269fcf45aa42ca718242b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053aa7359e4f607e0d706dd2b7a7373e') in 0.019317 seconds 
+  Import took 0.022971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Smoke.mat
+  artifactKey: Guid(e46ed962d95d56a428c2259e0ae4c4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Smoke.mat using Guid(e46ed962d95d56a428c2259e0ae4c4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b7e5a0a21190b6a8f98c7f03037b06') in 0.018298 seconds 
+  Import took 0.022050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Explosion01.mat
+  artifactKey: Guid(1aed627e4c280894f94f002a50bca90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Particles/Materials/Explosion01.mat using Guid(1aed627e4c280894f94f002a50bca90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6449a9abff6c875a2307dee22627fa78') in 0.019138 seconds 
+  Import took 0.022621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.510596 seconds.
+  path: Assets/UFPS/Base/Content/Art/Effects/Shells/Materials/Shell-02 - Default.mat
+  artifactKey: Guid(cd8e44c6bebfc1e409dea8b1ff914e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Effects/Shells/Materials/Shell-02 - Default.mat using Guid(cd8e44c6bebfc1e409dea8b1ff914e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e31abfb63bbef3a7e06f08ac4f2bfcc') in 0.033111 seconds 
+  Import took 0.043298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.578045 seconds.
+  path: Assets/UFPS/Base/Content/Art/Pickups/Source/PickupBubble_Source.psd
+  artifactKey: Guid(4da6bc1392a6dcd419b6d77d4bb903a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Pickups/Source/PickupBubble_Source.psd using Guid(4da6bc1392a6dcd419b6d77d4bb903a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71aecc40346486f9e32da2eb6e44f07') in 0.093298 seconds 
+  Import took 0.100368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.086532 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/D_Crate01.tga
+  artifactKey: Guid(30cbef73486a8a949ac91bbeab2be488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/D_Crate01.tga using Guid(30cbef73486a8a949ac91bbeab2be488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cfd36803972ad50af116aaeb8d261de') in 0.114288 seconds 
+  Import took 0.120980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/D_CrateSplinter.tga
+  artifactKey: Guid(ced8a57b5f6f3114a8c99c7052f63466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/D_CrateSplinter.tga using Guid(ced8a57b5f6f3114a8c99c7052f63466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '959c5fc8eb7385a3c592a9603bf56c92') in 0.109482 seconds 
+  Import took 0.114652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Crate01.fbx
+  artifactKey: Guid(aaecf6a76469eb04eb8e3b8eb23465cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Crate01.fbx using Guid(aaecf6a76469eb04eb8e3b8eb23465cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11a751718d41299e28aa5b355cfcecf') in 0.029275 seconds 
+  Import took 0.032858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri01.prefab
+  artifactKey: Guid(75fba37eac0145a489d3e02dcbfb5061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri01.prefab using Guid(75fba37eac0145a489d3e02dcbfb5061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '060464635c76efb5870ce4a2ba7d952b') in 0.022355 seconds 
+  Import took 0.025541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri02.fbx
+  artifactKey: Guid(ad37527d26580d24ca69d970b73ac0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri02.fbx using Guid(ad37527d26580d24ca69d970b73ac0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd2f8365477a05aacb367faa6bfe0493') in 0.019166 seconds 
+  Import took 0.022547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Crate01.prefab
+  artifactKey: Guid(120a352dd62edf4438ac0f8bb9dc7345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Crate01.prefab using Guid(120a352dd62edf4438ac0f8bb9dc7345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76420c7e06a42cc29b810787610063e1') in 0.015334 seconds 
+  Import took 0.019179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri03.fbx
+  artifactKey: Guid(d8d36c99e86a49346b4393982f96a665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri03.fbx using Guid(d8d36c99e86a49346b4393982f96a665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2875425548e6aa30392bcc7c680b0a07') in 0.022895 seconds 
+  Import took 0.026600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/M_Crate01.mat
+  artifactKey: Guid(cf41914522cc8314ca22225e101f5728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/M_Crate01.mat using Guid(cf41914522cc8314ca22225e101f5728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f247229d720bb9b203e394061cc7c001') in 0.013907 seconds 
+  Import took 0.017064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri01.fbx
+  artifactKey: Guid(d4031e28e1462444db51104c3b240b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Mesh_Debri01.fbx using Guid(d4031e28e1462444db51104c3b240b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758d1678f6607ced39a9dd2719781de7') in 0.024496 seconds 
+  Import took 0.027818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/M_CrateSplinter.mat
+  artifactKey: Guid(5325292f41be27b4b90bb5f59c7c4902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/M_CrateSplinter.mat using Guid(5325292f41be27b4b90bb5f59c7c4902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea463410a4d1d302992400e223d29ea4') in 0.030658 seconds 
+  Import took 0.033706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/NM_Crate01.tga
+  artifactKey: Guid(8f8168b81f5c229479d48a68d07d1a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/NM_Crate01.tga using Guid(8f8168b81f5c229479d48a68d07d1a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06fba46911aadf51d2e7cc139e6f3104') in 0.124305 seconds 
+  Import took 0.130925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri03.prefab
+  artifactKey: Guid(6bc73a6fd4f650a4691093a4abc91689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri03.prefab using Guid(6bc73a6fd4f650a4691093a4abc91689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c15c530a1bf34da32ccafd94a4634b1') in 0.027834 seconds 
+  Import took 0.035885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri02.prefab
+  artifactKey: Guid(ab938a9368942fa4786bc6a84d61176b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate01/Pf_Debri02.prefab using Guid(ab938a9368942fa4786bc6a84d61176b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bc47d3703dfa507cf5e67ea395fdd85') in 0.014279 seconds 
+  Import took 0.019154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/NM_Crate02.tga
+  artifactKey: Guid(a4cd78d362177094babe2c35771ccc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/NM_Crate02.tga using Guid(a4cd78d362177094babe2c35771ccc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b11695275655875dd1ec7e2d6d22d690') in 0.089667 seconds 
+  Import took 0.093044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/Mesh_Crate02.fbx
+  artifactKey: Guid(947680782f132e746a542d5c91a79a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/Mesh_Crate02.fbx using Guid(947680782f132e746a542d5c91a79a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2796b845e3cee41cb547b64e2e8034d4') in 0.020665 seconds 
+  Import took 0.023668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/M_Crate02.mat
+  artifactKey: Guid(9a4bac61c431c5e4c9171e7b29f3dd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/M_Crate02.mat using Guid(9a4bac61c431c5e4c9171e7b29f3dd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18a904b9fb367226e84300c94895441') in 0.038759 seconds 
+  Import took 0.042184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/Pf_Crate02.prefab
+  artifactKey: Guid(00e9aa6d344e9d74c85f1a08a99a4ac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/Pf_Crate02.prefab using Guid(00e9aa6d344e9d74c85f1a08a99a4ac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a8035b31a7bf6739e49120155f7e7d') in 0.013912 seconds 
+  Import took 0.017409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/D_Crate02.tga
+  artifactKey: Guid(fe70ccd56ebb69a4a9cffdfa35252dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate02/D_Crate02.tga using Guid(fe70ccd56ebb69a4a9cffdfa35252dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c5a6beb8af77e9f11d4eb5c0e918a75') in 0.117362 seconds 
+  Import took 0.122771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.803674 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/D_Crate03.tga
+  artifactKey: Guid(3ed8c58895e87fa46aa5ccd3af404a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/D_Crate03.tga using Guid(3ed8c58895e87fa46aa5ccd3af404a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08fb589be139097fb94c7c24b2aaf410') in 0.114012 seconds 
+  Import took 0.121138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/M_Crate03.mat
+  artifactKey: Guid(103028592a65f3943aa7f3ff4f9b9ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/M_Crate03.mat using Guid(103028592a65f3943aa7f3ff4f9b9ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6dea708b14c4f75163410abb4b8206f') in 0.041781 seconds 
+  Import took 0.047725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/Pf_Crate03.prefab
+  artifactKey: Guid(1e7ff812003fd914d9b51a940b962482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/Pf_Crate03.prefab using Guid(1e7ff812003fd914d9b51a940b962482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a5cdb5bdf3975345b74288bfabcc20a') in 0.013378 seconds 
+  Import took 0.017269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/Mesh_Crate03.fbx
+  artifactKey: Guid(f13ac3eb17e5fe8469ab16ee63e7baf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/Mesh_Crate03.fbx using Guid(f13ac3eb17e5fe8469ab16ee63e7baf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523bd0e7ffa633ef82a932d283ce5b45') in 0.022974 seconds 
+  Import took 0.026658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/NM_Crate03.tga
+  artifactKey: Guid(ea647ba9a7754bd43b1c045818434201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate03/NM_Crate03.tga using Guid(ea647ba9a7754bd43b1c045818434201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0e00950c0fe3867552f6299f7aa3c4') in 0.091364 seconds 
+  Import took 0.094800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.397861 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate04/D_Crate04.tga
+  artifactKey: Guid(1243c56ccf7373849a37493ea61e6d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate04/D_Crate04.tga using Guid(1243c56ccf7373849a37493ea61e6d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6c3ef26e2a3f4dd84d7e16472d4811') in 0.069484 seconds 
+  Import took 0.073431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Crates/Crate04/M_Crate04.mat
+  artifactKey: Guid(c9ec4514459ea4147a3001bba410a66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Crates/Crate04/M_Crate04.mat using Guid(c9ec4514459ea4147a3001bba410a66e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf585fd7db0293569b84c3992125899') in 0.031048 seconds 
+  Import took 0.034549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.629221 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Doors/Door01/D_Door01.tga
+  artifactKey: Guid(de8632cfb30a197419790e52e95d48ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Doors/Door01/D_Door01.tga using Guid(de8632cfb30a197419790e52e95d48ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b950353e244621bf7f65a65cb3818e4') in 0.144950 seconds 
+  Import took 0.150961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Doors/Door01/NM_Door01.tga
+  artifactKey: Guid(8a6ece1953af4164e9d2cff74e584823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Doors/Door01/NM_Door01.tga using Guid(8a6ece1953af4164e9d2cff74e584823) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293e45fd1aeb92d35cbef54d81a8b93f') in 0.104016 seconds 
+  Import took 0.108345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Doors/Door01/Pf_Door01.prefab
+  artifactKey: Guid(a116d60eba1ba3f46a52d343a62f3d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Doors/Door01/Pf_Door01.prefab using Guid(a116d60eba1ba3f46a52d343a62f3d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9eb6564f2f30488b09a9f6b7894195b') in 0.030474 seconds 
+  Import took 0.033734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Doors/Door01/M_Door01.mat
+  artifactKey: Guid(0bb4e58fb79ad6845b831f6b3f25aca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Doors/Door01/M_Door01.mat using Guid(0bb4e58fb79ad6845b831f6b3f25aca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c603a6a75f0a96be1ed9133d2b8954') in 0.013870 seconds 
+  Import took 0.017614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Doors/Door01/Mesh_Door01.fbx
+  artifactKey: Guid(33c5c29a754cde44fa392bd3a390cc3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Doors/Door01/Mesh_Door01.fbx using Guid(33c5c29a754cde44fa392bd3a390cc3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d98e047c349bb6358a1f4699cb93b66') in 0.025036 seconds 
+  Import took 0.028395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.492124 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/D_Ladder01.tga
+  artifactKey: Guid(b335344dc39e8e74caf6b124d54d2115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/D_Ladder01.tga using Guid(b335344dc39e8e74caf6b124d54d2115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72deb1821b269cf2b17c2c7d18e01302') in 0.111627 seconds 
+  Import took 0.118174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000404 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/NM_Ladder01.tga
+  artifactKey: Guid(e0f3ae39f09877e489df701b46d367be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/NM_Ladder01.tga using Guid(e0f3ae39f09877e489df701b46d367be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04cb6fa941f55a4805a45e577cb49ad') in 0.082208 seconds 
+  Import took 0.087156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/Pf_Ladder01.prefab
+  artifactKey: Guid(eaac6b01ae66e9147b2d029a5e306943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/Pf_Ladder01.prefab using Guid(eaac6b01ae66e9147b2d029a5e306943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff96a3ca5e4d676c4944637e15f20e91') in 0.029159 seconds 
+  Import took 0.032818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/M_Ladder01.mat
+  artifactKey: Guid(b43b462b0dcd06d49ab72869266ee9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/M_Ladder01.mat using Guid(b43b462b0dcd06d49ab72869266ee9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87dea8dc04a7d01a66d4635b200aae5d') in 0.012111 seconds 
+  Import took 0.017207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/Mesh_Ladder01.fbx
+  artifactKey: Guid(3ce1c4e6dc224f9448436012f60f9b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Ladders/Ladder01/Mesh_Ladder01.fbx using Guid(3ce1c4e6dc224f9448436012f60f9b6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd15bccdc1cfba1323b0de1cb2b3bc5') in 0.020497 seconds 
+  Import took 0.024702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.145349 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Switches/Button01/D_Button01.tga
+  artifactKey: Guid(df46dc8f1260c584fa4e34932c633ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Switches/Button01/D_Button01.tga using Guid(df46dc8f1260c584fa4e34932c633ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d10f59bcf4b6009265ff5f1cf96dba') in 0.092385 seconds 
+  Import took 0.099672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Switches/Button01/NM_Button01.tga
+  artifactKey: Guid(2acdce1866011ef42b9398a637710a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Switches/Button01/NM_Button01.tga using Guid(2acdce1866011ef42b9398a637710a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9728b0c982e4e51803e30d3a5de0f64e') in 0.087564 seconds 
+  Import took 0.091364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Switches/Button01/M_Button01.mat
+  artifactKey: Guid(da7003fefcb854c48a65d98a19a114b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Switches/Button01/M_Button01.mat using Guid(da7003fefcb854c48a65d98a19a114b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe642bf891834c5aaddba50b16c1bdea') in 0.033381 seconds 
+  Import took 0.037368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Switches/Button01/Pf_Button01.prefab
+  artifactKey: Guid(f5b96158e6bfe414da2ff71900f4d17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Switches/Button01/Pf_Button01.prefab using Guid(f5b96158e6bfe414da2ff71900f4d17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c247bc30d565eeda68831068b97e75a6') in 0.464631 seconds 
+  Import took 0.469196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/UFPS/Base/Content/Art/Props/Switches/Button01/Mesh_Button01.fbx
+  artifactKey: Guid(b5c9b2b29c5797b4ab9a07bda8d8c0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Props/Switches/Button01/Mesh_Button01.fbx using Guid(b5c9b2b29c5797b4ab9a07bda8d8c0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '265593931bbba26690afc55044d06058') in 0.018939 seconds 
+  Import took 0.022477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.793591 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/1.mat
+  artifactKey: Guid(ac3035e417778b64781cd27c7600ed7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/1.mat using Guid(ac3035e417778b64781cd27c7600ed7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d5d6bbb2d3bfe70fb8352bc971d714') in 0.018853 seconds 
+  Import took 0.024872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012379 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/Mace-1.mat
+  artifactKey: Guid(706b41f78cee0ac419a1a386de48b812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/Mace-1.mat using Guid(706b41f78cee0ac419a1a386de48b812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5be7e8e3a83007ffc9bc8cd561c769d') in 0.016381 seconds 
+  Import took 0.037041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/Mace-2.mat
+  artifactKey: Guid(0267bc633e8263f4082824bc4adb52d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mace/Materials/Mace-2.mat using Guid(0267bc633e8263f4082824bc4adb52d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b70f52488d733f4cb37501b17507d01c') in 0.014884 seconds 
+  Import took 0.018148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.457342 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/1.mat
+  artifactKey: Guid(d9de768b00bc3ae43a5a22ae1282e8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/1.mat using Guid(d9de768b00bc3ae43a5a22ae1282e8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a086d1a60df11aa0df44eadb899a3c0') in 0.022733 seconds 
+  Import took 0.029017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-2.mat
+  artifactKey: Guid(26eeae2420b1131449123c44ac97eb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-2.mat using Guid(26eeae2420b1131449123c44ac97eb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac4dcfb125e0d9abadf8c4039f0bc02e') in 0.025715 seconds 
+  Import took 0.029959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/2.mat
+  artifactKey: Guid(539ba863ce08d094d854a8e351053a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/2.mat using Guid(539ba863ce08d094d854a8e351053a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd624f880b094eeece12d3b7e9c25ec66') in 0.014517 seconds 
+  Import took 0.018840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/4.mat
+  artifactKey: Guid(9745ecd6a22c505489e936194c645560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/4.mat using Guid(9745ecd6a22c505489e936194c645560) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fb205463903046668ab7fcf7b5fca7') in 0.016114 seconds 
+  Import took 0.019796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-3.mat
+  artifactKey: Guid(231bebdd631344447ab536c96f87c995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-3.mat using Guid(231bebdd631344447ab536c96f87c995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '136ae3daddb172667cc1ef522512b3d3') in 0.017340 seconds 
+  Import took 0.021386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-1.mat
+  artifactKey: Guid(86b5d38fa230ece44ab827e4504bf781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-1.mat using Guid(86b5d38fa230ece44ab827e4504bf781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8db1d8e5d73e94523cf5ed14784ff1fb') in 0.013991 seconds 
+  Import took 0.018088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-4.mat
+  artifactKey: Guid(95f279de85be19a4b92eee3f931a9351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Machinegun/Materials/Machinegun-4.mat using Guid(95f279de85be19a4b92eee3f931a9351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66de97686c8a6cd3fbc292ff5d8728b3') in 0.012717 seconds 
+  Import took 0.017633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.760088 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/Arm.mat
+  artifactKey: Guid(d073305ddaba942aa8625cc0b7ef9f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/Arm.mat using Guid(d073305ddaba942aa8625cc0b7ef9f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e379a261f68292d940bf41e66a690485') in 0.006783 seconds 
+  Import took 0.010349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunWood.mat
+  artifactKey: Guid(cf1fb5dbc734b46d6ab2acaa1e814c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunWood.mat using Guid(cf1fb5dbc734b46d6ab2acaa1e814c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb0f93d4effcd04ae0da7b42776c835') in 0.012758 seconds 
+  Import took 0.015947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/Handgun.mat
+  artifactKey: Guid(fabd0ad6be0b342ce81721382bd55f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/Handgun.mat using Guid(fabd0ad6be0b342ce81721382bd55f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9f2c535acb900d45c4cea99bb731e9') in 0.020241 seconds 
+  Import took 0.024494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunMain.mat
+  artifactKey: Guid(8faf736f4ce024ef9984aa5e35323081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunMain.mat using Guid(8faf736f4ce024ef9984aa5e35323081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb0b0f32c993fd078079319a206ca60') in 0.013619 seconds 
+  Import took 0.017490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunAmmo.mat
+  artifactKey: Guid(e72e88111731f4647861ca4ea8abc53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/MachinegunAmmo.mat using Guid(e72e88111731f4647861ca4ea8abc53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d203caea59521b2e53496ca396de6d') in 0.014783 seconds 
+  Import took 0.019162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Materials/Mace.mat
+  artifactKey: Guid(01e97e48b309b5241a79016b633f5e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Materials/Mace.mat using Guid(01e97e48b309b5241a79016b633f5e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca5390ef8e2e298aa25112acaca7fc1') in 0.012591 seconds 
+  Import took 0.017008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.266849 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/Mech.fbx
+  artifactKey: Guid(bdad78be43f8f38439391ba0f3002f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/Mech.fbx using Guid(bdad78be43f8f38439391ba0f3002f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5197f236c2bea190275f483f3d9aba') in 0.216350 seconds 
+  Import took 0.222745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/MechNormal.tga
+  artifactKey: Guid(61c90852d5173b849bb27e4cbee8e669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/MechNormal.tga using Guid(61c90852d5173b849bb27e4cbee8e669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def2e87366fdf78b8612e099d903a0cf') in 0.052536 seconds 
+  Import took 0.056473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/MechDiffuse02.tga
+  artifactKey: Guid(fbf4e285d79fe674783f4319882d2a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/MechDiffuse02.tga using Guid(fbf4e285d79fe674783f4319882d2a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e064c735fdc356a0357dc457961a9b') in 0.011453 seconds 
+  Import took 0.014869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/MechDiffuse.tga
+  artifactKey: Guid(ad67d36c0905f6e4883e9635e5559609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/MechDiffuse.tga using Guid(ad67d36c0905f6e4883e9635e5559609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b350453b6300ffc8d3f21ca90dcc775') in 0.040932 seconds 
+  Import took 0.044570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.697498 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials
+  artifactKey: Guid(23c1e6fadfec4ed40854a639c0155684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials using Guid(23c1e6fadfec4ed40854a639c0155684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9fbdddcfdf9e9a138ce9525e60aaa38') in 0.005271 seconds 
+  Import took 0.009522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.543386 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-1.mat
+  artifactKey: Guid(56c24a7438acd1f47a35b0e57f9604d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-1.mat using Guid(56c24a7438acd1f47a35b0e57f9604d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a6b6b3fb39055a6739b086759f7fc5') in 0.018750 seconds 
+  Import took 0.025109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-2.mat
+  artifactKey: Guid(fe1e393946c7bbe4fbbfb0a126fed9a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-2.mat using Guid(fe1e393946c7bbe4fbbfb0a126fed9a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b75b372a6b6dd757296be784da41ea19') in 0.021842 seconds 
+  Import took 0.026804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-3.mat
+  artifactKey: Guid(2e90e33f563e4b74a8df1825b3562eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Mech/Materials/Mech-3.mat using Guid(2e90e33f563e4b74a8df1825b3562eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58139a8ea29e2462bad7a3c41cd4a48e') in 0.014934 seconds 
+  Import took 0.019311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.376831 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Handgun02Pickup.fbx
+  artifactKey: Guid(e565c5100907cd34fa58c17769d76fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Handgun02Pickup.fbx using Guid(e565c5100907cd34fa58c17769d76fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd2493c5b83ef3aa89a9a0fd4b080bf') in 0.027126 seconds 
+  Import took 0.033808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.674191 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/1.mat
+  artifactKey: Guid(514e26d4c7957744db4f748b80d36e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/1.mat using Guid(514e26d4c7957744db4f748b80d36e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3675f8639ee170bf35712e802c166e') in 0.012800 seconds 
+  Import took 0.020922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02Diffuse.mat
+  artifactKey: Guid(87cee6252e801054f80c83a97f15fa76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02Diffuse.mat using Guid(87cee6252e801054f80c83a97f15fa76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '348e28d1149db384b47a3254b2843289') in 0.022286 seconds 
+  Import took 0.027322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/3.mat
+  artifactKey: Guid(62a419a2dbcf8a94794b7c2d1003c3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/3.mat using Guid(62a419a2dbcf8a94794b7c2d1003c3b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ed3ec947aa06d830f5eb4a5aa87315') in 0.016683 seconds 
+  Import took 0.020972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-1.mat
+  artifactKey: Guid(8b452baaba8f346bb8669184f989c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-1.mat using Guid(8b452baaba8f346bb8669184f989c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12977f340cae7b02c90f089d45ca922d') in 0.017989 seconds 
+  Import took 0.022017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-3.mat
+  artifactKey: Guid(786fb56ba2ba0454c9152779aad7b1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-3.mat using Guid(786fb56ba2ba0454c9152779aad7b1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fa24e00ca2a9fdf266f5c2d4d7a8c0') in 0.015382 seconds 
+  Import took 0.018984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-2.mat
+  artifactKey: Guid(b08da6e327e9342839f8797151cbcdf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02-2.mat using Guid(b08da6e327e9342839f8797151cbcdf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4cf548ca018d55c6dd1c058085e9fd') in 0.019324 seconds 
+  Import took 0.022985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02Normal.mat
+  artifactKey: Guid(7b324e896f3bd774cb4729733ced3131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Pistol/Materials/Handgun02Normal.mat using Guid(7b324e896f3bd774cb4729733ced3131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3503722120eced0dd5d276dde9846c0b') in 0.019055 seconds 
+  Import took 0.023095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.918504 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Revolver/HandgunPickup.fbx
+  artifactKey: Guid(a8d832922f656a048907fa05891a352a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Revolver/HandgunPickup.fbx using Guid(a8d832922f656a048907fa05891a352a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e201e2108b649c89fbfa1dfbff7786') in 0.026418 seconds 
+  Import took 0.033087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.596230 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Revolver/Materials/2.mat
+  artifactKey: Guid(5f2f377e5ee147347b5e9073eff22744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Revolver/Materials/2.mat using Guid(5f2f377e5ee147347b5e9073eff22744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eeb6844d4187dcd4f2e071c7e274548') in 0.013700 seconds 
+  Import took 0.020361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.325047 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Arm_Diffuse.tga
+  artifactKey: Guid(e68afd7de8756c6429d5ec42491c9c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Arm_Diffuse.tga using Guid(e68afd7de8756c6429d5ec42491c9c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb3ab5a412bb890fcbdefe7e408af8a') in 0.142637 seconds 
+  Import took 0.149423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Arm_Normal.tga
+  artifactKey: Guid(826b25949fbbf404a8ddf7d90d7bc1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Arm_Normal.tga using Guid(826b25949fbbf404a8ddf7d90d7bc1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6ff721671d59522996e6e5927e2a24') in 0.102137 seconds 
+  Import took 0.108994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/BasicArms.fbx
+  artifactKey: Guid(513fcba26df666945ad8856ad91e77fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/BasicArms.fbx using Guid(513fcba26df666945ad8856ad91e77fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007c4a42a4594de1af65228ea5529be2') in 0.066191 seconds 
+  Import took 0.070694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.424818 seconds.
+  path: Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Materials/1.mat
+  artifactKey: Guid(c516b040bb9449f47b0adb2b5a970995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/Weapons/Source/BasicArms/Materials/1.mat using Guid(c516b040bb9449f47b0adb2b5a970995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8725d3c6e5bc54e782a38b111fb0520') in 0.012581 seconds 
+  Import took 0.017619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.889747 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/D_Knife01.tga
+  artifactKey: Guid(d2d297c895ec641c5aebe7f1d427fd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/D_Knife01.tga using Guid(d2d297c895ec641c5aebe7f1d427fd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e698d93f50bfc7fbe7643dd33152eb2') in 0.046022 seconds 
+  Import took 0.050576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/Knife01.fbx
+  artifactKey: Guid(13316992b6251460c88c7af0a80bf93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/Knife01.fbx using Guid(13316992b6251460c88c7af0a80bf93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6179b27aec596afda46ef8d80c8afd0') in 0.028954 seconds 
+  Import took 0.032537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/N_Knife01.tga
+  artifactKey: Guid(81ef52667e34f46ad8efbb3e059866d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/N_Knife01.tga using Guid(81ef52667e34f46ad8efbb3e059866d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96419702b2bebabc5990ab8145ed167a') in 0.021865 seconds 
+  Import took 0.024921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/Knife01.mat
+  artifactKey: Guid(e7eeb6db893af4ea091be462631dc810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Knife01/Knife01.mat using Guid(e7eeb6db893af4ea091be462631dc810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89eb286303fa1acd09bcfdc3f43a0f3') in 0.022646 seconds 
+  Import took 0.026854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.160497 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/DI_MuzzleFlash04.tga
+  artifactKey: Guid(4de861daf919372449a6f1dc89d12982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/DI_MuzzleFlash04.tga using Guid(4de861daf919372449a6f1dc89d12982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3f47bca29535f5233ed97f91be1175') in 0.024353 seconds 
+  Import took 0.030761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.275816 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/CM_Shotgun01.cubemap
+  artifactKey: Guid(81184790dff78854f87d718e3afdc013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/CM_Shotgun01.cubemap using Guid(81184790dff78854f87d718e3afdc013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a12700575d3bbee36dc093b293227e3e') in 0.118272 seconds 
+  Import took 0.123480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_ShotgunShell01.fbx
+  artifactKey: Guid(0c4d56da78ed3e3478463ee0d385c7af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_ShotgunShell01.fbx using Guid(0c4d56da78ed3e3478463ee0d385c7af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9804967b9fb33089107c7b5530754467') in 0.023690 seconds 
+  Import took 0.027021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_ShotgunShell01.tga
+  artifactKey: Guid(0c40b4a7cb550e04f81f73ae307e8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_ShotgunShell01.tga using Guid(0c40b4a7cb550e04f81f73ae307e8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c96082d2c6c3e5f242e549160fc2b8') in 0.047673 seconds 
+  Import took 0.050944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_Shotgun01.tga
+  artifactKey: Guid(e4cf6c6b9f3e55a4a9a6a74ec5eb5cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_Shotgun01.tga using Guid(e4cf6c6b9f3e55a4a9a6a74ec5eb5cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264be518faf1990e8d0ed90db83b9f58') in 0.047141 seconds 
+  Import took 0.051380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/NM_ShotgunShell01.tga
+  artifactKey: Guid(b95d4418b221c504caf599fad35264d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/NM_ShotgunShell01.tga using Guid(b95d4418b221c504caf599fad35264d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608226569d6df25551245531d1bb28bc') in 0.026828 seconds 
+  Import took 0.030230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_Shotgun01Pickup.fbx
+  artifactKey: Guid(7a1669058603a49869e8b2a10c7fd430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_Shotgun01Pickup.fbx using Guid(7a1669058603a49869e8b2a10c7fd430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8939d0974e9c2358c2d818787b377055') in 0.024820 seconds 
+  Import took 0.028438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/SP_Shotgun01.tga
+  artifactKey: Guid(55bb3404b19ab7042ac4b7a790fc03aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/SP_Shotgun01.tga using Guid(55bb3404b19ab7042ac4b7a790fc03aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7b71232abff66ba1f8b8e9bf10598d') in 0.014798 seconds 
+  Import took 0.018130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_MuzzleFlash03.tga
+  artifactKey: Guid(136683dc39194874aa9a51b3e2e03dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/DI_MuzzleFlash03.tga using Guid(136683dc39194874aa9a51b3e2e03dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d22583bbbaccbcb92e7c3d79488a08') in 0.037033 seconds 
+  Import took 0.040495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_ShotgunShell01Used.fbx
+  artifactKey: Guid(b02277431804d604a9a63093ee69382e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_ShotgunShell01Used.fbx using Guid(b02277431804d604a9a63093ee69382e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '218c642c25d7277cea1499f4ffd6e48d') in 0.022835 seconds 
+  Import took 0.025964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/NM_Shotgun01.tga
+  artifactKey: Guid(7557d87976dd3914ba5a951e30cdc86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/NM_Shotgun01.tga using Guid(7557d87976dd3914ba5a951e30cdc86f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2454619c983d546a47a390741c91dc90') in 0.039612 seconds 
+  Import took 0.044101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_Shotgun01.fbx
+  artifactKey: Guid(6d025852331c0bc4a9f2ce2c72ee7a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/ME_Shotgun01.fbx using Guid(6d025852331c0bc4a9f2ce2c72ee7a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b9c77d105109fd5ac964c0f9c3ab5a5') in 0.083982 seconds 
+  Import took 0.088263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.972329 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_MuzzleFlash03.mat
+  artifactKey: Guid(933acdc730ab64a4aa0d298853a26db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_MuzzleFlash03.mat using Guid(933acdc730ab64a4aa0d298853a26db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40d1a5296e23872e8c426308ae3bde39') in 0.032444 seconds 
+  Import took 0.036470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_ShotgunShell01.mat
+  artifactKey: Guid(436debeedbaabcd46be5f1ba455148ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_ShotgunShell01.mat using Guid(436debeedbaabcd46be5f1ba455148ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291cc649cdcb870d83d07a7af913909d') in 0.032949 seconds 
+  Import took 0.036474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_ShellBox01.mat
+  artifactKey: Guid(1cfb6df7bd8a3714baa8d81f7eaa8a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_ShellBox01.mat using Guid(1cfb6df7bd8a3714baa8d81f7eaa8a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c541f60826bdccc0172c433b1fc343d') in 0.041792 seconds 
+  Import took 0.045315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_Shotgun01.mat
+  artifactKey: Guid(8058aebe1a97c134789652c61608ffba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Shotgun01/Materials/MA_Shotgun01.mat using Guid(8058aebe1a97c134789652c61608ffba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2277616d9de7ec9300cbb49dbee6417') in 0.068488 seconds 
+  Import took 0.073927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.247848 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/1.mat
+  artifactKey: Guid(ec45d8c66510a3e4f8bd8726e056dcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/1.mat using Guid(ec45d8c66510a3e4f8bd8726e056dcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6a902a742fad95fb4185f1c9eec38f') in 0.037544 seconds 
+  Import took 0.044739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_Pistol01Clip.mat
+  artifactKey: Guid(f5a9d30a8f3b541fbbb66c316b14d622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_Pistol01Clip.mat using Guid(f5a9d30a8f3b541fbbb66c316b14d622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b11828bc706d894055e6230cee4f31') in 0.024409 seconds 
+  Import took 0.030306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_Pistol01Pickup.mat
+  artifactKey: Guid(a322432f00f63466494487e0c3903c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_Pistol01Pickup.mat using Guid(a322432f00f63466494487e0c3903c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c35ca60e8716569b359ce3ede97046f') in 0.016273 seconds 
+  Import took 0.020368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_MuzzleFlash04.mat
+  artifactKey: Guid(2ac519aba738f734484fa2723b57602a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UFPS/Base/Content/Art/WeaponsHD/Pistol01/Materials/MA_MuzzleFlash04.mat using Guid(2ac519aba738f734484fa2723b57602a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '295c8592eabcfd05406bfe845190aa06') in 0.015946 seconds 
+  Import took 0.019828 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005796 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.011 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2279 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.0 MB.
+System memory in use after: 114.2 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2755.
+Total: 4.501400 ms (FindLiveObjects: 0.193000 ms CreateObjectMapping: 0.097900 ms MarkObjects: 4.179700 ms  DeleteObjects: 0.029900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
