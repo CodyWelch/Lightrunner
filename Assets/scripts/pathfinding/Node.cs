@@ -8,13 +8,12 @@ public class Node {
 	public int gridX;
 	public int gridY;
 	public GameObject tile;
-	public Material tile_mat;
 
 	public int gCost;
 	public int hCost;
 	public Node parent;
 	
-	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY , GameObject _tile, Material _tile_mat) {
+	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY , GameObject _tile) {
 		walkable = _walkable;
 		worldPosition = _worldPos;
 		gridX = _gridX;

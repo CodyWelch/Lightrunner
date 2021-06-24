@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision){
 		Debug.Log ("Player collided with " + collision.gameObject.tag);
-		if (collision.transform.tag == "Final_tile") {
+		if (collision.transform.tag == "finalTile") {
 			Debug.Log ("Player on final tile.");
 			gc.GetComponent <GameController> ().LevelFinished ();
 		}
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collision){
 		Debug.Log (gameObject.name + " has collided with " + collision.gameObject.name);
-		if (collision.transform.tag == "Final_tile") {
+		if (collision.transform.tag == "finalTile") {
 			Debug.Log ("Player on final tile.");
 			gc.GetComponent <GameController> ().LevelFinished ();
 		}

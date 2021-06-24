@@ -15,7 +15,7 @@ public class Generator : MonoBehaviour {
 	public GameObject finalTile;
 
 	[SerializeField]
-	private Material Final_Tile_Mat;
+	private Material finalTile_Mat;
 
 	[SerializeField]
 	public GameObject tile_parent;
@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour {
 	[SerializeField]
 	public GameObject enemy_parent;
 
-	public Material final_tile_material;
+	public Material finalTile_material;
 
 	[SerializeField]
 	private Vector2 gridWorldSize;
@@ -74,9 +74,9 @@ public class Generator : MonoBehaviour {
 				{
 					Debug.Log("hellllo");
 					node = finalTile;
-					currentNode.name = "Final_Tile";
-					//currentNode.GetComponent<Renderer>().material = Final_Tile_Mat;
-					//Instantiate(Final_tile, new Vector3(currentNode.transform.position.x, currentNode.transform.position.y, currentNode.transform.position.z), tile_light.transform.localRotation);
+					currentNode.name = "finalTile";
+					//currentNode.GetComponent<Renderer>().material = finalTile_Mat;
+					//Instantiate(finalTile, new Vector3(currentNode.transform.position.x, currentNode.transform.position.y, currentNode.transform.position.z), tile_light.transform.localRotation);
 					//Color gold = new Color (255, 215, 0);
 				}
 				else if (counter == start)

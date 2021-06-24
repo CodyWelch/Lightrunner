@@ -9,38 +9,25 @@ using UnityEngine.Analytics;
 
 public class GameController : MonoBehaviour {
 
-	public Text time_score;
-	[SerializeField]
-	float seconds;
-	[SerializeField]
-	float minutes;
+	private float seconds;
+	private float minutes;
 	protected vp_FPPlayerEventHandler m_Player = null;
-	public static GameController control;
-	[SerializeField]
-	float health;
-	[SerializeField]
-	int experience;
+	private float health;
+	private int experience;
 	public GameObject Player;
-	string pname;
+	string playerName;
 	protected MyBehaviour events;
 
 	vp_SimpleHUD getHealthMultiplier;
-	int playerHP;
+	private int playerHP;
+	private int runonce = 0;
+
 
 	void Start() {
 
-
-		pname = PlayerPrefs.GetString("name").ToString();
+		playerName = PlayerPrefs.GetString("name").ToString();
 		getHealthMultiplier = Player.GetComponent<vp_SimpleHUD> ();
 		m_Player = Player.GetComponent<vp_FPPlayerEventHandler>();
-		events = this.GetComponent<MyBehaviour> ();
-
-		if (control == null) {
-			DontDestroyOnLoad (gameObject);
-			control = this;
-		}else if (control != this){
-			Destroy (gameObject);
-		}
 
 		/*if (SceneManager.GetActiveScene ().buildIndex == 1) {
 			Debug.Log ("Level 1, reset params");
@@ -51,13 +38,15 @@ public class GameController : MonoBehaviour {
 		}*/
 
 	}
-	int runonce = 0;
 
-	void Update(){
-		if (Player == null) {
+	void Update()
+	{
+		if (Player == null) 
+		{
 			Player = GameObject.FindGameObjectWithTag ("Player");
 		}
-		if (SceneManager.GetActiveScene ().buildIndex == 1 && runonce ==0) {
+		if (SceneManager.GetActiveScene ().buildIndex == 1 && runonce == 0 ) 
+		{
 			Debug.Log ("Level 1, reset params");
 			//PlayerPrefs.SetInt ("experience", 0);
 			//PlayerPrefs.SetInt ("health", 0);
@@ -71,27 +60,32 @@ public class GameController : MonoBehaviour {
 		experience = PlayerPrefs.GetInt ("experience");
 
 		if (Input.GetKeyDown ("p")) {
-			events.MissionCompleted (minutes,experience);
+			//events.MissionCompleted (minutes,experience);
 			LevelFinished ();
 		}
 	}
 
-	public void LevelFinished(){
-		save ();
+	public void LevelFinished()
+	{
+		Save ();
 		//UpdateAnalytics ();
 		//Debug.Break ();
 
 		int active_scene = SceneManager.GetActiveScene().buildIndex;
 		Debug.Log ("Scene: " + active_scene);
-		if (active_scene == 6) {
+		if (active_scene == 6) 
+		{
 			SceneManager.LoadScene (1);
-		} else {
+		} 
+		else
+		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 		}
 
 	}
 
-	void save(){
+	private void Save()
+	{
 		//Debug.Log ("Updating Save Time: " + Time.fixedTime);
 		PlayerPrefs.SetFloat("minutes", minutes);
 		PlayerPrefs.SetFloat("seconds", seconds);
@@ -100,26 +94,29 @@ public class GameController : MonoBehaviour {
 	}
 		
 
-	void UpdateAnalytics(){
+	private void UpdateAnalytics()
+	{
 		Debug.Log ("Updating analytics");
 		Analytics.CustomEvent("beatLevel", new Dictionary<string, object>
 			{
 				{ "seconds", (minutes*60)+seconds},
 				{ "health", playerHP},
-				{ "name", pname},
+				{ "name", playerName},
 				{ "experience", experience}
 			});
 	}
 		
-	void OnGUI(){
+	void OnGUI()
+	{
 		GUI.Label (new Rect (10, 10, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
-		//GUI.Label (new Rect (10, 10, 100, 30), pname);
+		//GUI.Label (new Rect (10, 10, 100, 30), playerName);
 		//GUI.Label (new Rect (10, 40, 100, 30), "Health: " + playerHP);
 		//GUI.Label (new Rect (10, 70, 100, 30), "Experience: " + PlayerPrefs.GetInt("experience"));
 	//	GUI.Label (new Rect (10, 100, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
 	}
 
-	protected virtual void OnEnable(){
+	protected virtual void OnEnable()
+	{
 
 		if (m_Player != null)
 
@@ -128,7 +125,8 @@ public class GameController : MonoBehaviour {
 	}
 
 
-	protected virtual void OnDisable(){
+	protected virtual void OnDisable()
+	{
 
 		if (m_Player != null)
 
@@ -137,8 +135,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Event handlers (events added through PlayerEventHandlers
-	void OnMessage_EnemyDied(){
-		Debug.Log ("Enemy has died Dead");
+	void OnMessage_EnemyDied()
+	{
+		Debug.Log ("Enemy has died.");
 
 		experience++;
 		PlayerPrefs.SetInt ("experience", experience);
