@@ -22,13 +22,19 @@ public class GameController : MonoBehaviour {
 	private int playerHP;
 	private int runonce = 0;
 
+	[SerializeField]
+	private int difficulty;
+
+	[SerializeField]
+	private int Xsize;
+	[SerializeField]
+	private int Ysize;
+
+	private Grid grid;
 
 	void Start() {
-
-		playerName = PlayerPrefs.GetString("name").ToString();
-		getHealthMultiplier = Player.GetComponent<vp_SimpleHUD> ();
-		m_Player = Player.GetComponent<vp_FPPlayerEventHandler>();
-
+		Xsize = 50;
+		Ysize = 100;
 		/*if (SceneManager.GetActiveScene ().buildIndex == 1) {
 			Debug.Log ("Level 1, reset params");
 			PlayerPrefs.SetInt ("experience", 0);
@@ -39,8 +45,23 @@ public class GameController : MonoBehaviour {
 
 	}
 
+	private bool bGridInitialized = false;
 	void Update()
 	{
+
+		if(bGridInitialized == false)
+        {
+			GameObject temp = GameObject.FindGameObjectWithTag("GridGO");
+			grid = temp.GetComponent<Grid>();
+			grid.CreateGrid(Xsize, Ysize);
+			playerName = PlayerPrefs.GetString("name").ToString();
+			getHealthMultiplier = Player.GetComponent<vp_SimpleHUD>();
+			m_Player = Player.GetComponent<vp_FPPlayerEventHandler>();
+			bGridInitialized = true;
+
+		}
+		//grid.FindPath();
+
 		if (Player == null) 
 		{
 			Player = GameObject.FindGameObjectWithTag ("Player");
@@ -79,7 +100,12 @@ public class GameController : MonoBehaviour {
 		} 
 		else
 		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+			difficulty++;
+			Xsize += 20;
+			Ysize += 20;
+			bGridInitialized = false;
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 
 	}
