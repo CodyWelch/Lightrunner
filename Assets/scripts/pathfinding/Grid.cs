@@ -52,45 +52,61 @@ public class Grid : MonoBehaviour {
 	private GameObject parent_enemies;
 	private GameObject parent_pickups;
 
-	Transform tile_seeker;
-	Transform tile_target;
-	public Transform seeker;
-	public Transform target;
+	[SerializeField]
+	private Transform tile_seeker;
+	[SerializeField]
+	private Transform tile_target;
 
 
 	float nodeDiameter;
 	int gridSizeX, gridSizeY;
 
 	//Randomization
-	public int final;
-	public int start;
 	public int counter;
 	public int tile_count;
 
-	int saved_health;
+	// player values
+	private int saved_health;
 
-	public int obstacle_min = 0;
-	public int obstacle_max = 10;
+	// default tile values
+	// 10% obstacles
+	private int obstacleMin = 0;
+	private int obstacleMax = 10;
 
-	public int health_min = 10;
-	public int health_max = 12;
+	// 2% health
+	private int healthMin = 10;
+	private int healthMax = 12;
 
-	public int ammo_min = 12;
-	public int ammo_max = 20;
+	// 5% ammo
+	private int ammoMin = 12;
+	private int ammoMax = 17;
 
-	public int common_min = 20;
-	public int common_max = 100;
+	// 83% common
+	private int commonMin = 20;
+	private int commonMax = 100;
 
-	int max_pickups = 5;
-	int current_pickups = 0;
-	[SerializeField]
-	private GameObject player_object;
+	// 5% max pickups
+	private int pickupsMax = 5;
+	private int pickupsCurrent = 0;
+
+	//[SerializeField]
+	//private GameObject player;
 
 	[SerializeField]
 	private GameObject[] border;
 
-	void Init() 
+	public void CreateGrid(int gridWorldSizeX, int gridWorldSizeY) 
 	{
+		//player = GameObject.FindGameObjectWithTag("Player");
+
+		gridWorldSize.x = gridWorldSizeX;
+		gridWorldSize.y = gridWorldSizeY;
+
+		tile_seeker = Instantiate(new GameObject()).transform;
+		tile_seeker.name = "Seeker";
+
+		tile_target = Instantiate(new GameObject()).transform;
+		tile_target.name = "Target";
 
 		parent_tiles = Instantiate(new GameObject());
 		parent_tiles.name = "Tiles";
@@ -104,8 +120,6 @@ public class Grid : MonoBehaviour {
 		parent_pickups = Instantiate(new GameObject());
 		parent_pickups.name = "Pickups";
 
-		tile_seeker = seeker;
-		tile_target = target;
 
 		nodeDiameter = nodeRadius*2;
 		gridSizeX = Mathf.RoundToInt(gridWorldSize.x/nodeDiameter);
@@ -119,59 +133,54 @@ public class Grid : MonoBehaviour {
 
 		if (saved_health <= 30) 
 		{
-			health_max += 5;
-			ammo_min += 5;
-			ammo_max += 5;
-			common_min += 5;
+			healthMax += 5;
+			ammoMin += 5;
+			ammoMax += 5;
+			commonMin += 5;
 		}
+
+		BuildGrid();
 	}
 
-	public void CreateGrid(int gridWorldSizeX, int gridWorldSizeY) 
+	private void BuildGrid() 
 	{
-		Init();
-		gridWorldSize.x = gridWorldSizeX;
-		gridWorldSize.y = gridWorldSizeY;
-
-		int final;
-		int start;
+		int finalTileIndex;
+		int startTileIndex;
 		Vector3 worldBottomLeft;
 
 		tile_count = (int)(gridWorldSize.x * gridWorldSize.y) / 100;
-		final = (int)Random.Range (tile_count * 0.8f, tile_count);
-		start = (int)Random.Range (1, 5);
+		finalTileIndex = (int)Random.Range (tile_count * 0.8f, tile_count);
+		startTileIndex = (int)Random.Range (1, 5);
 		counter = 0;
         grid = new Node[gridSizeX, gridSizeY];
 		worldBottomLeft = new Vector3(0.0f,0.0f,0.0f) - Vector3.right * gridWorldSize.x/2 - Vector3.forward * gridWorldSize.y/2;
-		
-		CreateBorders();
+
+		SetupBorders();
 
 		for (int x = 0; x < gridSizeX; x ++) {
 			for (int y = 0; y < gridSizeY; y ++) {
 
 				Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
 
-				GameObject currentTile;
-
-
-				if (counter == final) {
-					currentTile = CreateFinalTile(worldPoint, x, y);
-				} else if (counter == start) {
-					currentTile = CreateStartTile(worldPoint, x, y);
+				if (counter == finalTileIndex) {
+					CreateFinalTile(worldPoint, x, y);
+				} else if (counter == startTileIndex) {
+					CreateStartTile(worldPoint, x, y);
 				}
 				else {
 					int random_tile = Random.Range(0, 101);
-					common_max = tile_count;
-					if (obstacle_min <= random_tile && random_tile < obstacle_max) {
-						currentTile = CreateObstacleTile(worldPoint, x, y);
+
+					if (obstacleMin <= random_tile && random_tile < obstacleMax) {
+						CreateObstacleTile(worldPoint, x, y);
 						// Health
-					} else if (health_min <= random_tile && random_tile < health_max && current_pickups < max_pickups) {
-						currentTile = CreateHealthTile(worldPoint, x, y);
+					} else if (healthMin <= random_tile && random_tile < healthMax && pickupsCurrent < pickupsMax) {
+						CreateHealthTile(worldPoint, x, y);
 						/// Ammo
-					} else if (ammo_min <= random_tile && random_tile < ammo_max && current_pickups < max_pickups) {
-						currentTile = CreateAmmoTile(worldPoint, x, y);
+					} else if (ammoMin <= random_tile && random_tile < ammoMax && pickupsCurrent < pickupsMax) {
+						CreateAmmoTile(worldPoint, x, y);
 						// Enemy
-					} else{// if (common_min <= random_tile && random_tile <= common_max || current_pickups == max_pickups) {
-						currentTile = CreateCommonTile(worldPoint, x, y);
+					} else{// if (commonMin <= random_tile && random_tile <= commonMax || pickupsCurrent == pickupsMax) {
+						CreateCommonTile(worldPoint, x, y);
 					}
 				}
 				counter++;
@@ -180,23 +189,25 @@ public class Grid : MonoBehaviour {
 	}
 
 
-	//limits to player area
-	private void CreateBorders()
+	//limits the player area
+	private void SetupBorders()
     {
 		// Bottom
 		border[0].transform.localScale = new Vector3(border[0].transform.localScale.x, border[0].transform.localScale.y, gridWorldSize.y);
 		border[0].transform.position = new Vector3((gridSizeX * 5), border[0].transform.position.y, border[0].transform.position.x);
+
 		// Right
-		border[1].transform.localScale = new Vector3(border[1].transform.localScale.x, border[1].transform.localScale.y, border[1].transform.localScale.z * gridSizeY * 5);
-		border[1].transform.position = new Vector3(border[1].transform.position.x, border[1].transform.position.y, gridWorldSize.x);
+		border[1].transform.localScale = new Vector3(border[1].transform.localScale.x, border[1].transform.localScale.y, gridWorldSize.x);
+		border[1].transform.position = new Vector3(border[1].transform.position.x, border[1].transform.position.y, gridSizeY * 5);
 
 		//Left
-		border[2].transform.localScale = new Vector3(border[2].transform.localScale.x, border[2].transform.localScale.y, border[2].transform.localScale.z * gridSizeY * 5);
-		border[2].transform.position = new Vector3(border[2].transform.position.x, border[2].transform.position.y, gridWorldSize.x * -1);
+		border[2].transform.localScale = new Vector3(border[2].transform.localScale.x, border[2].transform.localScale.y, gridWorldSize.x);
+		border[2].transform.position = new Vector3(border[2].transform.position.x, border[2].transform.position.y, gridSizeY * -5);
 
 		// Top
+
 		border[3].transform.localScale = new Vector3(border[3].transform.localScale.x, border[3].transform.localScale.y, gridWorldSize.y);
-		border[3].transform.position = new Vector3((gridSizeX * 5 * -1), border[3].transform.position.y, border[3].transform.position.x);
+		border[3].transform.position = new Vector3((gridSizeX * -5), border[3].transform.position.y, border[3].transform.position.x);
 		
 	}
 
@@ -256,13 +267,22 @@ public class Grid : MonoBehaviour {
 		currentTile.name = "Final Tile";
 		currentTile.tag = "Final_tile";
 		tile_target.position = worldPoint;
-		target.position = worldPoint;
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
 		return currentTile;
 	}
 
+	private GameObject curentStartTile;
+
+	public void Reset()
+    {
+		Destroy(parent_tiles);
+		Destroy(parent_lights);
+		Destroy(parent_enemies);
+		Destroy(parent_pickups);
+
+}
 	private GameObject CreateStartTile(Vector3 worldPoint, int x, int y)
     {
 		bool walkable = true;
@@ -272,14 +292,20 @@ public class Grid : MonoBehaviour {
 		tile_seeker.position = worldPoint;
 		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
 		newLight.transform.parent = parent_lights.transform;
+		curentStartTile = currentTile;
 
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
-		player_object.transform.position = new Vector3(worldPoint.x,player_object.transform.position.y,worldPoint.z);
+		//player.transform.position = new Vector3(worldPoint.x,player.transform.position.y,worldPoint.z);
 
 		return currentTile;
 	}
+
+	public void SetPlayerStartPoint(GameObject mainPlayer)
+    {
+		mainPlayer.transform.position = new Vector3(curentStartTile.transform.position.x, curentStartTile.transform.position.y+1, curentStartTile.transform.position.z);
+    }
 
 	private GameObject CreateObstacleTile(Vector3 worldPoint, int x, int y)
     {
@@ -307,13 +333,11 @@ public class Grid : MonoBehaviour {
 		int enemy_test = Random.Range(0, 3);
 		if (enemy_test == 0)
 		{
-			//Debug.Log (worldPoint.y);
 			GameObject new_enemy = Instantiate(enemy_prefab[0], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 			new_enemy.transform.parent = parent_enemies.transform;
 		}
 		else if (enemy_test == 1)
 		{
-			//Debug.Log (worldPoint.y);
 			GameObject new_enemy = Instantiate(enemy_prefab[1], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 			new_enemy.transform.parent = parent_enemies.transform;
 		}
@@ -328,9 +352,8 @@ public class Grid : MonoBehaviour {
 
 		}
 
-			GameObject currentLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
-			currentLight.transform.parent = currentTile.transform;
-
+		GameObject currentLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
+		currentLight.transform.parent = parent_lights.transform;
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
@@ -345,10 +368,15 @@ public class Grid : MonoBehaviour {
 		currentTile.name = "Ammo Tile";
 		currentTile.tag = "Ammo_tile";
 		currentTile.GetComponent<Renderer>().material = pickup_tile_mat;
+		currentTile.transform.parent = parent_tiles.transform;
+
 		GameObject newPickup = Instantiate(pickup, new Vector3(worldPoint.x, worldPoint.y + 2, worldPoint.z), Quaternion.identity);
 		newPickup.transform.parent = parent_pickups.transform;
-		current_pickups++;
-		currentTile.transform.parent = parent_tiles.transform;
+		pickupsCurrent++;
+
+		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
+		newLight.transform.parent = parent_lights.transform;
+
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
 		return currentTile;
@@ -357,28 +385,28 @@ public class Grid : MonoBehaviour {
 
 	private GameObject CreateHealthTile(Vector3 worldPoint, int x, int y)
     {
-		Debug.Log("create health tile");
 		bool walkable = true;
-		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 
+		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Health Tile";
 		currentTile.tag = "Health_tile";
 		currentTile.GetComponent<Renderer>().material = pickup_tile_mat;
+		currentTile.transform.parent = parent_tiles.transform;
+
 		GameObject newPickup = Instantiate(health_pickup, new Vector3(worldPoint.x, worldPoint.y + 2, worldPoint.z), Quaternion.identity);
 		newPickup.transform.parent = parent_pickups.transform;
+		pickupsCurrent++;
 
 		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
 		newLight.transform.parent = parent_lights.transform;
 
-		current_pickups++;
-		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
 		return currentTile;
 	}
 
-
-	public Node NodeFromWorldPoint(Vector3 worldPosition) {
+	public Node NodeFromWorldPoint(Vector3 worldPosition) 
+	{
 		float percentX = (worldPosition.x + gridWorldSize.x/2) / gridWorldSize.x;
 		float percentY = (worldPosition.z + gridWorldSize.y/2) / gridWorldSize.y;
 		percentX = Mathf.Clamp01(percentX);
@@ -394,7 +422,7 @@ public class Grid : MonoBehaviour {
 	public Material onPath;
 	public Material offPath;
 
-	void Update(){
+	/*void Update(){
 		if (false)
 		{
 			if (doOnce == false)
@@ -417,7 +445,7 @@ public class Grid : MonoBehaviour {
 							n.tile.GetComponent<Renderer>().material = obstacle_tile_mat;	
 						}else if(n.tile.tag == "Start_tile"){
 							//n.tile.GetComponent<Renderer>().material = common_tile_mat;	
-						}*/
+						}
 
 						GameObject currentTile = n.tile;
 						if (path != null)
@@ -437,7 +465,7 @@ public class Grid : MonoBehaviour {
 
 									Light test = currentTile.GetComponentInChildren<Light> ();
 									test.enabled = false;
-								}*/
+								}
 								doOnce = true;
 								if (n.worldPosition == tile_target.position)
 								{
@@ -454,15 +482,15 @@ public class Grid : MonoBehaviour {
 				}
 			}
 		}
-	}
+	}*/
 
 	public void FindPath()
 	{
-		Vector3 startPos = tile_seeker.position;
-		Vector3 targetPos = tile_target.position;
+		//Vector3 startPos = tile_seeker.position;
+		//Vector3 targetPos = tile_target.position;
 
-		Node startNode = NodeFromWorldPoint(startPos);
-		Node targetNode = NodeFromWorldPoint(targetPos);
+		Node startNode = NodeFromWorldPoint(tile_seeker.position);
+		Node targetNode = NodeFromWorldPoint(tile_seeker.position);
 
 		List<Node> openSet = new List<Node>();
 		HashSet<Node> closedSet = new HashSet<Node>();

@@ -8,7 +8,7 @@ public class LightTile: MonoBehaviour {
 	private Material newMaterial;
 
 	void OnCollisionEnter(Collision collision){
-		Debug.Log (collision.transform.tag);
+		Debug.Log (collision.transform.name);
 		if (collision.transform.tag == "Player") {
 			Debug.Log ("light tile");
 			this.gameObject.GetComponent<Renderer> ().material = newMaterial;

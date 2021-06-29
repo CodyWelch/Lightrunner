@@ -13,7 +13,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
-//#define DEBUG	// uncomment to display timers in the Unity Editor Hierarchy
+#define DEBUG	// uncomment to display timers in the Unity Editor Hierarchy
 
 using UnityEngine;
 using System;
