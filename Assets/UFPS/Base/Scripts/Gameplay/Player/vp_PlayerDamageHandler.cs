@@ -126,6 +126,7 @@ public class vp_PlayerDamageHandler : vp_DamageHandler
 	/// </summary>
 	public override void Die()
 	{
+		GameController.instance.PlayerDead();
 
 		if (!enabled || !vp_Utility.IsActive(gameObject))
 			return;

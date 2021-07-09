@@ -12,6 +12,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class vp_FPInput : vp_Component
 {
@@ -30,6 +31,11 @@ public class vp_FPInput : vp_Component
 	protected List<Vector2> m_MouseLookSmoothBuffer = new List<Vector2>();
 	protected int m_LastMouseLookFrame = -1;
 	protected Vector2 m_CurrentMouseLook = Vector2.zero;
+
+	private int maxStamina = 1000;
+	private int currentStamina = 1000;
+	private WaitForSeconds regenStaminaTick = new WaitForSeconds(0.1f);
+	private Coroutine regen;
 
 	// mouse cursor
 	public Rect[] MouseCursorZones = null;			// screen regions where mouse arrow remains visible when clicking. may be set up in the Inspector
@@ -165,14 +171,54 @@ public class vp_FPInput : vp_Component
 	protected virtual void InputRun()
 	{
 
-		if (vp_Input.GetButton("Run")
-			  || vp_Input.GetAxisRaw("LeftTrigger") > 0.5f		// sprint using the left gamepad trigger
-			)
-			FPPlayer.Run.TryStart();
+		if (vp_Input.GetButton("Run") || vp_Input.GetAxisRaw("LeftTrigger") > 0.5f)      // sprint using the left gamepad trigger
+		{
+			if (currentStamina > 0)
+			{
+				UseStamina(1);
+				FPPlayer.Run.TryStart();
+            }
+            else
+            {
+				FPPlayer.Run.TryStop();
+			}
+		}
 		else
+		{
 			FPPlayer.Run.TryStop();
-
+		}
 	}
+
+	private void UseStamina(int amount)
+    {
+		if(currentStamina - amount >=0)
+        {
+			currentStamina -= amount;
+
+			if(regen!=null)
+            {
+				StopCoroutine(regen);
+            }
+
+			regen = StartCoroutine(RegenStamina());
+        }else
+        {
+			Debug.Log("not enough stam");
+        }
+    }
+
+	private IEnumerator RegenStamina()
+    {
+		yield return new WaitForSeconds(1);
+
+		while(currentStamina<maxStamina)
+        {
+			currentStamina += maxStamina / 100;
+			//staminaBar.value = currentStamina;
+			yield return regenStaminaTick;
+		}
+		regen = null;
+    }
 
 
 	/// <summary>

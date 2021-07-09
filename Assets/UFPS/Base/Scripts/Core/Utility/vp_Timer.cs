@@ -13,7 +13,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
-#define DEBUG	// uncomment to display timers in the Unity Editor Hierarchy
+//#define DEBUG	// uncomment to display timers in the Unity Editor Hierarchy
 
 using UnityEngine;
 using System;
@@ -275,7 +275,7 @@ public class vp_Timer : MonoBehaviour
 			{
 				m_MainObject = new GameObject("Timers");
 				m_MainObject.AddComponent<vp_Timer>();
-				UnityEngine.Object.DontDestroyOnLoad(m_MainObject);
+				//UnityEngine.Object.DontDestroyOnLoad(m_MainObject);
 			}
 			else
 				return;

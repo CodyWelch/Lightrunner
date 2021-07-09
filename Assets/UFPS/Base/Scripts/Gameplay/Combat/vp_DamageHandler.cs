@@ -264,6 +264,8 @@ public class vp_DamageHandler : MonoBehaviour
 		if (vp_Gameplay.IsMultiplayer && (damageInfo.Source != null))
 			vp_GlobalEvent<Transform, Transform, float>.Send("TransmitDamage", Transform.root, damageInfo.OriginalSource, damageInfo.Damage);
 
+
+
 		// detect and transmit death as event
 		if (CurrentHealth <= 0.0f)
 		{
@@ -327,6 +329,9 @@ public class vp_DamageHandler : MonoBehaviour
 	public virtual void Die()
 	{
 
+
+		this.GetComponent<CapsuleCollider>().enabled = false;
+		this.GetComponent<BoxCollider>().enabled = false;
 		if (!enabled || !vp_Utility.IsActive(gameObject))
 			return;
 

@@ -1,112 +1,320 @@
 fileFormatVersion: 2
 guid: bca7f710957da454b90a6199e56685bb
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Base HumanHead
-    100002: Base HumanLCalf
-    100004: Base HumanLCollarbone
-    100006: Base HumanLDigit11
-    100008: Base HumanLDigit11 1
-    100010: Base HumanLDigit12
-    100012: Base HumanLDigit13
-    100014: Base HumanLDigit21
-    100016: Base HumanLDigit22
-    100018: Base HumanLDigit31
-    100020: Base HumanLDigit32
-    100022: Base HumanLDigit41
-    100024: Base HumanLDigit42
-    100026: Base HumanLFoot
-    100028: Base HumanLForearm
-    100030: Base HumanLPalm
-    100032: Base HumanLThigh
-    100034: Base HumanLUpperarm
-    100036: Base HumanNeck
-    100038: Base HumanPelvis
-    100040: Base HumanRCalf
-    100042: Base HumanRCollarbone
-    100044: Base HumanRDigit11
-    100046: Base HumanRDigit11 1
-    100048: Base HumanRDigit12
-    100050: Base HumanRDigit13
-    100052: Base HumanRDigit21
-    100054: Base HumanRDigit22
-    100056: Base HumanRDigit31
-    100058: Base HumanRDigit32
-    100060: Base HumanRDigit41
-    100062: Base HumanRDigit42
-    100064: Base HumanRFoot
-    100066: Base HumanRForearm
-    100068: Base HumanRibcage
-    100070: Base HumanRPalm
-    100072: Base HumanRThigh
-    100074: Base HumanRUpperarm
-    100076: Base HumanSpine1
-    100078: Base HumanSpine2
-    100080: Base HumanSpine3
-    100082: bon_gob_war_jaw
-    100084: bon_gob_war_jaw_tip
-    100086: //RootNode
-    100088: zombie
-    400000: Base HumanHead
-    400002: Base HumanLCalf
-    400004: Base HumanLCollarbone
-    400006: Base HumanLDigit11
-    400008: Base HumanLDigit11 1
-    400010: Base HumanLDigit12
-    400012: Base HumanLDigit13
-    400014: Base HumanLDigit21
-    400016: Base HumanLDigit22
-    400018: Base HumanLDigit31
-    400020: Base HumanLDigit32
-    400022: Base HumanLDigit41
-    400024: Base HumanLDigit42
-    400026: Base HumanLFoot
-    400028: Base HumanLForearm
-    400030: Base HumanLPalm
-    400032: Base HumanLThigh
-    400034: Base HumanLUpperarm
-    400036: Base HumanNeck
-    400038: Base HumanPelvis
-    400040: Base HumanRCalf
-    400042: Base HumanRCollarbone
-    400044: Base HumanRDigit11
-    400046: Base HumanRDigit11 1
-    400048: Base HumanRDigit12
-    400050: Base HumanRDigit13
-    400052: Base HumanRDigit21
-    400054: Base HumanRDigit22
-    400056: Base HumanRDigit31
-    400058: Base HumanRDigit32
-    400060: Base HumanRDigit41
-    400062: Base HumanRDigit42
-    400064: Base HumanRFoot
-    400066: Base HumanRForearm
-    400068: Base HumanRibcage
-    400070: Base HumanRPalm
-    400072: Base HumanRThigh
-    400074: Base HumanRUpperarm
-    400076: Base HumanSpine1
-    400078: Base HumanSpine2
-    400080: Base HumanSpine3
-    400082: bon_gob_war_jaw
-    400084: bon_gob_war_jaw_tip
-    400086: zombie
-    400088: //RootNode
-    4300000: zombie
-    7400000: idle
-    7400002: attack1
-    7400004: attack2
-    7400006: hit
-    7400008: idle_break
-    7400010: death
-    7400012: walk1
-    7400014: walk2
-    7400016: Take 0017
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: zombie
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Base HumanHead
+  - first:
+      1: 100002
+    second: Base HumanLCalf
+  - first:
+      1: 100004
+    second: Base HumanLCollarbone
+  - first:
+      1: 100006
+    second: Base HumanLDigit11
+  - first:
+      1: 100008
+    second: Base HumanLDigit11 1
+  - first:
+      1: 100010
+    second: Base HumanLDigit12
+  - first:
+      1: 100012
+    second: Base HumanLDigit13
+  - first:
+      1: 100014
+    second: Base HumanLDigit21
+  - first:
+      1: 100016
+    second: Base HumanLDigit22
+  - first:
+      1: 100018
+    second: Base HumanLDigit31
+  - first:
+      1: 100020
+    second: Base HumanLDigit32
+  - first:
+      1: 100022
+    second: Base HumanLDigit41
+  - first:
+      1: 100024
+    second: Base HumanLDigit42
+  - first:
+      1: 100026
+    second: Base HumanLFoot
+  - first:
+      1: 100028
+    second: Base HumanLForearm
+  - first:
+      1: 100030
+    second: Base HumanLPalm
+  - first:
+      1: 100032
+    second: Base HumanLThigh
+  - first:
+      1: 100034
+    second: Base HumanLUpperarm
+  - first:
+      1: 100036
+    second: Base HumanNeck
+  - first:
+      1: 100038
+    second: Base HumanPelvis
+  - first:
+      1: 100040
+    second: Base HumanRCalf
+  - first:
+      1: 100042
+    second: Base HumanRCollarbone
+  - first:
+      1: 100044
+    second: Base HumanRDigit11
+  - first:
+      1: 100046
+    second: Base HumanRDigit11 1
+  - first:
+      1: 100048
+    second: Base HumanRDigit12
+  - first:
+      1: 100050
+    second: Base HumanRDigit13
+  - first:
+      1: 100052
+    second: Base HumanRDigit21
+  - first:
+      1: 100054
+    second: Base HumanRDigit22
+  - first:
+      1: 100056
+    second: Base HumanRDigit31
+  - first:
+      1: 100058
+    second: Base HumanRDigit32
+  - first:
+      1: 100060
+    second: Base HumanRDigit41
+  - first:
+      1: 100062
+    second: Base HumanRDigit42
+  - first:
+      1: 100064
+    second: Base HumanRFoot
+  - first:
+      1: 100066
+    second: Base HumanRForearm
+  - first:
+      1: 100068
+    second: Base HumanRibcage
+  - first:
+      1: 100070
+    second: Base HumanRPalm
+  - first:
+      1: 100072
+    second: Base HumanRThigh
+  - first:
+      1: 100074
+    second: Base HumanRUpperarm
+  - first:
+      1: 100076
+    second: Base HumanSpine1
+  - first:
+      1: 100078
+    second: Base HumanSpine2
+  - first:
+      1: 100080
+    second: Base HumanSpine3
+  - first:
+      1: 100082
+    second: bon_gob_war_jaw
+  - first:
+      1: 100084
+    second: bon_gob_war_jaw_tip
+  - first:
+      1: 100086
+    second: //RootNode
+  - first:
+      1: 100088
+    second: zombie
+  - first:
+      4: 400000
+    second: Base HumanHead
+  - first:
+      4: 400002
+    second: Base HumanLCalf
+  - first:
+      4: 400004
+    second: Base HumanLCollarbone
+  - first:
+      4: 400006
+    second: Base HumanLDigit11
+  - first:
+      4: 400008
+    second: Base HumanLDigit11 1
+  - first:
+      4: 400010
+    second: Base HumanLDigit12
+  - first:
+      4: 400012
+    second: Base HumanLDigit13
+  - first:
+      4: 400014
+    second: Base HumanLDigit21
+  - first:
+      4: 400016
+    second: Base HumanLDigit22
+  - first:
+      4: 400018
+    second: Base HumanLDigit31
+  - first:
+      4: 400020
+    second: Base HumanLDigit32
+  - first:
+      4: 400022
+    second: Base HumanLDigit41
+  - first:
+      4: 400024
+    second: Base HumanLDigit42
+  - first:
+      4: 400026
+    second: Base HumanLFoot
+  - first:
+      4: 400028
+    second: Base HumanLForearm
+  - first:
+      4: 400030
+    second: Base HumanLPalm
+  - first:
+      4: 400032
+    second: Base HumanLThigh
+  - first:
+      4: 400034
+    second: Base HumanLUpperarm
+  - first:
+      4: 400036
+    second: Base HumanNeck
+  - first:
+      4: 400038
+    second: Base HumanPelvis
+  - first:
+      4: 400040
+    second: Base HumanRCalf
+  - first:
+      4: 400042
+    second: Base HumanRCollarbone
+  - first:
+      4: 400044
+    second: Base HumanRDigit11
+  - first:
+      4: 400046
+    second: Base HumanRDigit11 1
+  - first:
+      4: 400048
+    second: Base HumanRDigit12
+  - first:
+      4: 400050
+    second: Base HumanRDigit13
+  - first:
+      4: 400052
+    second: Base HumanRDigit21
+  - first:
+      4: 400054
+    second: Base HumanRDigit22
+  - first:
+      4: 400056
+    second: Base HumanRDigit31
+  - first:
+      4: 400058
+    second: Base HumanRDigit32
+  - first:
+      4: 400060
+    second: Base HumanRDigit41
+  - first:
+      4: 400062
+    second: Base HumanRDigit42
+  - first:
+      4: 400064
+    second: Base HumanRFoot
+  - first:
+      4: 400066
+    second: Base HumanRForearm
+  - first:
+      4: 400068
+    second: Base HumanRibcage
+  - first:
+      4: 400070
+    second: Base HumanRPalm
+  - first:
+      4: 400072
+    second: Base HumanRThigh
+  - first:
+      4: 400074
+    second: Base HumanRUpperarm
+  - first:
+      4: 400076
+    second: Base HumanSpine1
+  - first:
+      4: 400078
+    second: Base HumanSpine2
+  - first:
+      4: 400080
+    second: Base HumanSpine3
+  - first:
+      4: 400082
+    second: bon_gob_war_jaw
+  - first:
+      4: 400084
+    second: bon_gob_war_jaw_tip
+  - first:
+      4: 400086
+    second: zombie
+  - first:
+      4: 400088
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: zombie
+  - first:
+      74: 7400000
+    second: idle
+  - first:
+      74: 7400002
+    second: attack1
+  - first:
+      74: 7400004
+    second: attack2
+  - first:
+      74: 7400006
+    second: hit
+  - first:
+      74: 7400008
+    second: idle_break
+  - first:
+      74: 7400010
+    second: death
+  - first:
+      74: 7400012
+    second: walk1
+  - first:
+      74: 7400014
+    second: walk2
+  - first:
+      74: 7400016
+    second: Take 0017
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: zombie
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -114,7 +322,7 @@ ModelImporter:
       name: zombie_01
     second: {fileID: 2100000, guid: 79b0613ba869dc24a922cf91d4046a1f, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -130,15 +338,15 @@ ModelImporter:
       error = 27.910387 mm\n\t'Base HumanLDigit31' : position error = 21.554218 mm\n\t'Base
       HumanLDigit41' : position error = 11.730649 mm\n\t'Base HumanRDigit31' : position
       error = 21.549036 mm\n\t'Base HumanRDigit41' : position error = 11.729412 mm\nAvatar
-      Rig Configuration mis-match. Inbetween bone rotation in configuration does not
-      match rotation in animation file:\n\t'Base HumanRibcage' : rotation error =
-      1.921662 deg\n"
+      Rig Configuration mis-match. Inbetween bone rotation in configuration does
+      not match rotation in animation file:\n\t'Base HumanRibcage' : rotation error
+      = 1.921662 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Base HumanSpine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Base HumanRibcage' is
-      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Base HumanSpine2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Base HumanRibcage'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
       HumanLDigit31' has translation animation that will be discarded.\n\t'Base HumanLDigit41'
       has translation animation that will be discarded.\n\t'Base HumanRDigit31' has
       translation animation that will be discarded.\n\t'Base HumanRDigit41' has translation
@@ -158,6 +366,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 100
       wrapMode: 2
@@ -166,7 +375,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -186,6 +395,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 100
       lastFrame: 140
       wrapMode: 0
@@ -214,6 +424,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 140
       lastFrame: 190
       wrapMode: 0
@@ -242,6 +453,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 190
       lastFrame: 210
       wrapMode: 0
@@ -270,6 +482,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle_break
       takeName: Take 001
+      internalID: 0
       firstFrame: 220
       lastFrame: 320
       wrapMode: 0
@@ -298,6 +511,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: Take 001
+      internalID: 0
       firstFrame: 350
       lastFrame: 390
       wrapMode: 0
@@ -312,9 +526,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -326,6 +540,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk1
       takeName: Take 001
+      internalID: 0
       firstFrame: 400
       lastFrame: 430
       wrapMode: 2
@@ -334,7 +549,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -354,6 +569,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk2
       takeName: Take 001
+      internalID: 0
       firstFrame: 450
       lastFrame: 490
       wrapMode: 2
@@ -362,7 +578,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -379,32 +595,39 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -413,10 +636,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Base HumanPelvis
       humanName: Hips
@@ -966,13 +1189,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
   assetBundleName: 

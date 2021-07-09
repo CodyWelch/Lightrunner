@@ -6,14 +6,14 @@ public class Grid : MonoBehaviour {
 
 	[SerializeField]
 	private bool showPath = false;
-	// Settings
-	public bool nolight = true;
 
 	// Need for checksphere
 	public LayerMask unwalkableMask;
 	public Vector2 gridWorldSize;
 	private int nodeRadius = 5;
 	Node[,] grid;
+	private Node startNode;
+	private Node targetNode;
 
 	[SerializeField]
 	private GameObject large_skeleton;
@@ -22,6 +22,9 @@ public class Grid : MonoBehaviour {
 
 	[SerializeField]
 	public GameObject tile_light;
+	private Color redLight = Color.red;
+	private Color greenLight = Color.green;
+	private Color blueLight = Color.blue;
 	[SerializeField]
 	public GameObject[] enemy_prefab;
 	[SerializeField]
@@ -40,23 +43,23 @@ public class Grid : MonoBehaviour {
 	public GameObject commonTile;
 	[SerializeField]
 	public GameObject pickupTile;
+	[SerializeField]
+	private GameObject secretTile;
 
+	// Materials
 	[SerializeField]
 	public Material obstacle_tile_mat;
 	public Material finalTile_mat;
 	public Material common_tile_mat;
 	public Material pickup_tile_mat;
 
+	[SerializeField]
+	private Material lavaTileMat;
+
 	private GameObject parent_tiles;
 	private GameObject parent_lights;
 	private GameObject parent_enemies;
 	private GameObject parent_pickups;
-
-	[SerializeField]
-	private Transform tile_seeker;
-	[SerializeField]
-	private Transform tile_target;
-
 
 	float nodeDiameter;
 	int gridSizeX, gridSizeY;
@@ -77,36 +80,28 @@ public class Grid : MonoBehaviour {
 	private int healthMin = 10;
 	private int healthMax = 12;
 
-	// 5% ammo
+	// 10% ammo
 	private int ammoMin = 12;
-	private int ammoMax = 17;
+	private int ammoMax = 22;
 
 	// 83% common
-	private int commonMin = 20;
+	private int commonMin = 22;
 	private int commonMax = 100;
 
 	// 5% max pickups
 	private int pickupsMax = 5;
 	private int pickupsCurrent = 0;
 
-	//[SerializeField]
-	//private GameObject player;
-
 	[SerializeField]
 	private GameObject[] border;
 
-	public void CreateGrid(int gridWorldSizeX, int gridWorldSizeY) 
+	public List<Node> path;
+	public void CreateGrid(int gridWorldSizeX, int gridWorldSizeY, int difficulty) 
 	{
 		//player = GameObject.FindGameObjectWithTag("Player");
 
 		gridWorldSize.x = gridWorldSizeX;
 		gridWorldSize.y = gridWorldSizeY;
-
-		tile_seeker = Instantiate(new GameObject()).transform;
-		tile_seeker.name = "Seeker";
-
-		tile_target = Instantiate(new GameObject()).transform;
-		tile_target.name = "Target";
 
 		parent_tiles = Instantiate(new GameObject());
 		parent_tiles.name = "Tiles";
@@ -130,27 +125,44 @@ public class Grid : MonoBehaviour {
 		Debug.Log("Health in grid: " + PlayerPrefs.GetInt("health"));
 		Debug.Log("Exp in grid: " + PlayerPrefs.GetInt("experience"));
 
+		pickupsMax += difficulty;
 
-		if (saved_health <= 30) 
+		// Player needs health
+		/*if (saved_health <= 30) 
 		{
 			healthMax += 5;
 			ammoMin += 5;
 			ammoMax += 5;
 			commonMin += 5;
-		}
+		}*/
 
+		// Player needs ammo
+		/*if (saved_health <= 30) 
+		{
+			ammoMax += 5;
+			commonMin += 5;
+		}*/
 		BuildGrid();
+		FindPath();
+
+		// TODO
+		// make path
+		// shuffle path
+		// reset
 	}
 
 	private void BuildGrid() 
 	{
 		int finalTileIndex;
 		int startTileIndex;
+		int secretTileIndex;
 		Vector3 worldBottomLeft;
 
 		tile_count = (int)(gridWorldSize.x * gridWorldSize.y) / 100;
 		finalTileIndex = (int)Random.Range (tile_count * 0.8f, tile_count);
-		startTileIndex = (int)Random.Range (1, 5);
+		startTileIndex = (int)Random.Range (1, tile_count * 0.1f);
+		secretTileIndex = (int)Random.Range (startTileIndex+1,finalTileIndex);
+
 		counter = 0;
         grid = new Node[gridSizeX, gridSizeY];
 		worldBottomLeft = new Vector3(0.0f,0.0f,0.0f) - Vector3.right * gridWorldSize.x/2 - Vector3.forward * gridWorldSize.y/2;
@@ -166,10 +178,17 @@ public class Grid : MonoBehaviour {
 					CreateFinalTile(worldPoint, x, y);
 				} else if (counter == startTileIndex) {
 					CreateStartTile(worldPoint, x, y);
+				}else if(counter == secretTileIndex){
+					CreateSecretTile(worldPoint, x, y);
 				}
 				else {
 					int random_tile = Random.Range(0, 101);
 
+					// default:
+					// 10% chance of obstacle tile 
+					// 2% chance of health tile 
+					// 10% chance of ammo tile
+					// Remainder common tile
 					if (obstacleMin <= random_tile && random_tile < obstacleMax) {
 						CreateObstacleTile(worldPoint, x, y);
 						// Health
@@ -185,6 +204,15 @@ public class Grid : MonoBehaviour {
 				}
 				counter++;
 			}
+		}
+
+
+		// Assign parents
+		
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach(GameObject enemy in enemies)
+		{
+			enemy.transform.parent = parent_enemies.transform;
 		}
 	}
 
@@ -265,10 +293,11 @@ public class Grid : MonoBehaviour {
 
 		GameObject currentTile = Instantiate(finalTile, worldPoint, Quaternion.identity);
 		currentTile.name = "Final Tile";
-		currentTile.tag = "Final_tile";
-		tile_target.position = worldPoint;
+		//currentTile.tag = "Final_tile";
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
+		targetNode = grid[x, y];
+
 
 		return currentTile;
 	}
@@ -282,21 +311,29 @@ public class Grid : MonoBehaviour {
 		Destroy(parent_enemies);
 		Destroy(parent_pickups);
 
-}
+	}
+
+	private void CreateLight(Color lightColor, Vector3 position)
+    {
+		GameObject newLight = Instantiate(tile_light, new Vector3(position.x, position.y + 7.81f, position.z), tile_light.transform.localRotation);
+		
+		newLight.GetComponent<Light>().color = lightColor;
+		newLight.transform.parent = parent_lights.transform;
+	}
+
 	private GameObject CreateStartTile(Vector3 worldPoint, int x, int y)
     {
 		bool walkable = true;
 		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Start Tile";
-		currentTile.tag = "Start_tile";
-		tile_seeker.position = worldPoint;
-		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
-		newLight.transform.parent = parent_lights.transform;
-		curentStartTile = currentTile;
+		//currentTile.tag = "Start_tile";
 
+		curentStartTile = currentTile;
+		CreateLight(greenLight, worldPoint);
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
+		startNode = grid[x, y];
 		//player.transform.position = new Vector3(worldPoint.x,player.transform.position.y,worldPoint.z);
 
 		return currentTile;
@@ -306,13 +343,66 @@ public class Grid : MonoBehaviour {
     {
 		mainPlayer.transform.position = new Vector3(curentStartTile.transform.position.x, curentStartTile.transform.position.y+1, curentStartTile.transform.position.z);
     }
+	private GameObject CreateSecretTile(Vector3 worldPoint, int x, int y)
+	{
+		bool walkable = true;
 
+		GameObject currentTile = Instantiate(secretTile, worldPoint, Quaternion.identity);
+		currentTile.name = "Secret Tile";
+		currentTile.GetComponent<Renderer>().material = common_tile_mat;
+		GameObject new_enemy;
+		int enemy_test = Random.Range(0, 6);
+		if (enemy_test == 0)
+		{
+			new_enemy = Instantiate(enemy_prefab[0], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 1)
+		{
+			new_enemy = Instantiate(enemy_prefab[1], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 2)
+		{
+			enemy_test = Random.Range(0, 100);
+			if (enemy_test > 50)
+			{
+				new_enemy = Instantiate(large_skeleton, new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+			}
+			else
+			{
+				new_enemy = Instantiate(enemy_prefab[3], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+			}
+		}
+		else if (enemy_test == 3)
+		{
+			new_enemy = Instantiate(enemy_prefab[2], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 4)
+		{
+			new_enemy = Instantiate(enemy_prefab[3], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 5)
+		{
+			new_enemy = Instantiate(enemy_prefab[4], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+
+
+
+
+		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
+		newLight.GetComponent<Light>().color = redLight;
+
+		newLight.transform.parent = parent_lights.transform;
+		currentTile.transform.parent = parent_tiles.transform;
+		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
+
+		return currentTile;
+	}
 	private GameObject CreateObstacleTile(Vector3 worldPoint, int x, int y)
     {
-		bool walkable = true;
+		bool walkable = false;
 		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Obstacle Tile";
-		currentTile.tag = "Obstacle_tile";
+		//currentTile.tag = "Obstacle_tile";
 		currentTile.GetComponent<Renderer>().material = obstacle_tile_mat;
 		currentTile.transform.localScale += new Vector3(0, 10, 0);
 		currentTile.transform.parent = parent_tiles.transform;
@@ -327,33 +417,50 @@ public class Grid : MonoBehaviour {
 
 		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Common Tile";
-		currentTile.tag = "Common_tile";
+		//currentTile.tag = "Common_tile";
 		currentTile.GetComponent<Renderer>().material = common_tile_mat;
-
-		int enemy_test = Random.Range(0, 3);
+		GameObject new_enemy;
+		int enemy_test = Random.Range(0, 6);
 		if (enemy_test == 0)
 		{
-			GameObject new_enemy = Instantiate(enemy_prefab[0], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
-			new_enemy.transform.parent = parent_enemies.transform;
+			 new_enemy = Instantiate(enemy_prefab[0], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 		}
 		else if (enemy_test == 1)
 		{
-			GameObject new_enemy = Instantiate(enemy_prefab[1], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
-			new_enemy.transform.parent = parent_enemies.transform;
+			 new_enemy = Instantiate(enemy_prefab[1], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 		}
 		else if (enemy_test == 2)
 		{
 			enemy_test = Random.Range(0, 100);
 			if (enemy_test > 50)
 			{
-				GameObject new_enemy = Instantiate(large_skeleton, new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
-				new_enemy.transform.parent = parent_enemies.transform;
+				 new_enemy = Instantiate(large_skeleton, new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+            }
+            else
+            {
+				 new_enemy = Instantiate(enemy_prefab[3], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 			}
-
+		}
+		else if (enemy_test == 3)
+		{
+			 new_enemy = Instantiate(enemy_prefab[2], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 4)
+		{
+			 new_enemy = Instantiate(enemy_prefab[3], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
+		}
+		else if (enemy_test == 5)
+		{
+			new_enemy = Instantiate(enemy_prefab[4], new Vector3(worldPoint.x, worldPoint.y + 0.5f, worldPoint.z), Quaternion.identity);
 		}
 
-		GameObject currentLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
-		currentLight.transform.parent = parent_lights.transform;
+
+
+
+		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
+		newLight.GetComponent<Light>().color = redLight;
+
+		newLight.transform.parent = parent_lights.transform;
 		currentTile.transform.parent = parent_tiles.transform;
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
@@ -366,7 +473,6 @@ public class Grid : MonoBehaviour {
 		bool walkable = true;
 		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Ammo Tile";
-		currentTile.tag = "Ammo_tile";
 		currentTile.GetComponent<Renderer>().material = pickup_tile_mat;
 		currentTile.transform.parent = parent_tiles.transform;
 
@@ -376,6 +482,7 @@ public class Grid : MonoBehaviour {
 
 		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
 		newLight.transform.parent = parent_lights.transform;
+		newLight.GetComponent<Light>().color = blueLight;
 
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 
@@ -389,7 +496,7 @@ public class Grid : MonoBehaviour {
 
 		GameObject currentTile = Instantiate(tile, worldPoint, Quaternion.identity);
 		currentTile.name = "Health Tile";
-		currentTile.tag = "Health_tile";
+	//	currentTile.tag = "Health_tile";
 		currentTile.GetComponent<Renderer>().material = pickup_tile_mat;
 		currentTile.transform.parent = parent_tiles.transform;
 
@@ -398,6 +505,7 @@ public class Grid : MonoBehaviour {
 		pickupsCurrent++;
 
 		GameObject newLight = Instantiate(tile_light, new Vector3(worldPoint.x, worldPoint.y + 7.81f, worldPoint.z), tile_light.transform.localRotation);
+		newLight.GetComponent<Light>().color = blueLight;
 		newLight.transform.parent = parent_lights.transform;
 
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
@@ -417,81 +525,15 @@ public class Grid : MonoBehaviour {
 		return grid[x,y];
 	}
 
-	public bool doOnce = false;
-	public List<Node> path;
-	public Material onPath;
-	public Material offPath;
-
-	/*void Update(){
-		if (false)
-		{
-			if (doOnce == false)
-			{
-				if (grid != null)
-				{
-					foreach (Node n in grid)
-					{
-						//Gizmos.color = (n.walkable) ? Color.white : Color.red;
-						//Debug.Log(n.tile_mat);
-						//n.tile.GetComponent<Renderer>().material = (n.walkable) ? n.tile_mat : obstacle_tile_mat;
-
-						/*if (n.tile.tag == "Common_tile") {
-							n.tile.GetComponent<Renderer>().material = common_tile_mat;	
-						} else if (n.tile.tag == "finalTile") {
-							n.tile.GetComponent<Renderer>().material = finalTile_mat;	
-						}else if(n.tile.tag == "Pickup_tile"){
-							n.tile.GetComponent<Renderer>().material = pickup_tile_mat;	
-						}else if(n.tile.tag == "Obstacle_tile"){
-							n.tile.GetComponent<Renderer>().material = obstacle_tile_mat;	
-						}else if(n.tile.tag == "Start_tile"){
-							//n.tile.GetComponent<Renderer>().material = common_tile_mat;	
-						}
-
-						GameObject currentTile = n.tile;
-						if (path != null)
-						{
-							Debug.Log("path exists");
-							if (path.Contains(n))
-							{
-								//currentTile.GetComponent<Renderer> ().material = onPath;
-								//Debug.Log (n + "is on path");
-								if (showPath)
-								{
-									currentTile.GetComponent<Renderer>().material = finalTile_mat;
-								}
-
-
-								/*if (currentTile.GetComponentInChildren<Light> () != null) {
-
-									Light test = currentTile.GetComponentInChildren<Light> ();
-									test.enabled = false;
-								}
-								doOnce = true;
-								if (n.worldPosition == tile_target.position)
-								{
-									currentTile.GetComponent<Renderer>().material = finalTile_mat;
-
-								}
-							}
-							else
-							{
-								//currentTile.GetComponent<Renderer> ().material = common_tile_mat;
-							}
-						}
-					}
-				}
-			}
-		}
-	}*/
-
 	public void FindPath()
 	{
 		//Vector3 startPos = tile_seeker.position;
 		//Vector3 targetPos = tile_target.position;
 
-		Node startNode = NodeFromWorldPoint(tile_seeker.position);
-		Node targetNode = NodeFromWorldPoint(tile_seeker.position);
+		//Node startNode = NodeFromWorldPoint(tile_seeker.position);
+		//Node targetNode = NodeFromWorldPoint(tile_seeker.position);
 
+		
 		List<Node> openSet = new List<Node>();
 		HashSet<Node> closedSet = new HashSet<Node>();
 		openSet.Add(startNode);
@@ -538,10 +580,10 @@ public class Grid : MonoBehaviour {
 		}
 	}
 
-	private void RetracePath(Node startNode, Node endNode)
+	private void RetracePath(Node startNode, Node targetNode)
 	{
 		List<Node> newPath = new List<Node>();
-		Node currentNode = endNode;
+		Node currentNode = targetNode;
 
 		while (currentNode != startNode)
 		{
@@ -560,5 +602,15 @@ public class Grid : MonoBehaviour {
 		if (dstX > dstY)
 			return 14 * dstY + 10 * (dstX - dstY);
 		return 14 * dstX + 10 * (dstY - dstX);
+	}
+
+	public void ShowPath()
+    {
+		Debug.Log("showing path");
+		foreach (Node currentNode in path)
+		{
+			currentNode.tile.GetComponent<Renderer>().material = finalTile_mat;
+
+		}
 	}
 }

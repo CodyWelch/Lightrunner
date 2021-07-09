@@ -60,7 +60,7 @@ public class tt_Modified_bsn_PainGiver : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 		if (enabled) {
-			if (Vector3.Distance (this.gameObject.transform.position, other.gameObject.transform.position) < 5) {
+			if (Vector3.Distance (this.gameObject.transform.position, other.gameObject.transform.position) < 6) {
 				inPainZone = true;
 			}
 

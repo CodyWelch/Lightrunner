@@ -1,108 +1,308 @@
 fileFormatVersion: 2
 guid: b06a3bc128ba15c47a163d19015dfe9a
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Orc
-    100002: //RootNode
-    100004: Orc_club
-    100006: Orc_helmet
-    100008: Orc_shield
-    100010: Orccloth1
-    100012: Orccloth2
-    100014: OrcHead
-    100016: OrcLCalf
-    100018: OrcLCollarbone
-    100020: OrcLDigit11
-    100022: OrcLDigit11 1
-    100024: OrcLDigit21
-    100026: OrcLDigit22
-    100028: OrcLFoot
-    100030: OrcLForearm
-    100032: OrcLPalm
-    100034: OrcLThigh
-    100036: OrcLUpperarm
-    100038: OrcMouth
-    100040: OrcNeck
-    100042: OrcPelvis
-    100044: OrcRCalf
-    100046: OrcRCollarbone
-    100048: OrcRDigit11
-    100050: OrcRDigit11 1
-    100052: OrcRDigit21
-    100054: OrcRDigit22
-    100056: OrcRFoot
-    100058: OrcRForearm
-    100060: OrcRibcage
-    100062: OrcRPalm
-    100064: OrcRThigh
-    100066: OrcRUpperarm
-    100068: OrcSpine1
-    100070: OrcSpine2
-    100072: OrcSpine3
-    400000: Orc
-    400002: //RootNode
-    400004: Orc_club
-    400006: Orc_helmet
-    400008: Orc_shield
-    400010: Orccloth1
-    400012: Orccloth2
-    400014: OrcHead
-    400016: OrcLCalf
-    400018: OrcLCollarbone
-    400020: OrcLDigit11
-    400022: OrcLDigit11 1
-    400024: OrcLDigit21
-    400026: OrcLDigit22
-    400028: OrcLFoot
-    400030: OrcLForearm
-    400032: OrcLPalm
-    400034: OrcLThigh
-    400036: OrcLUpperarm
-    400038: OrcMouth
-    400040: OrcNeck
-    400042: OrcPelvis
-    400044: OrcRCalf
-    400046: OrcRCollarbone
-    400048: OrcRDigit11
-    400050: OrcRDigit11 1
-    400052: OrcRDigit21
-    400054: OrcRDigit22
-    400056: OrcRFoot
-    400058: OrcRForearm
-    400060: OrcRibcage
-    400062: OrcRPalm
-    400064: OrcRThigh
-    400066: OrcRUpperarm
-    400068: OrcSpine1
-    400070: OrcSpine2
-    400072: OrcSpine3
-    2300000: Orc_club
-    2300002: Orc_helmet
-    2300004: Orc_shield
-    3300000: Orc_club
-    3300002: Orc_helmet
-    3300004: Orc_shield
-    4300000: Orc_shield
-    4300002: Orc_club
-    4300004: Orc_helmet
-    4300006: Orc
-    7400000: idle
-    7400002: idle_break
-    7400004: hit
-    7400006: attack1
-    7400008: attack2
-    7400010: die
-    7400012: jump
-    7400014: walk
-    7400016: block
-    7400018: death
-    7400020: walk
-    7400022: run
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: Orc
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Orc
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Orc_club
+  - first:
+      1: 100006
+    second: Orc_helmet
+  - first:
+      1: 100008
+    second: Orc_shield
+  - first:
+      1: 100010
+    second: Orccloth1
+  - first:
+      1: 100012
+    second: Orccloth2
+  - first:
+      1: 100014
+    second: OrcHead
+  - first:
+      1: 100016
+    second: OrcLCalf
+  - first:
+      1: 100018
+    second: OrcLCollarbone
+  - first:
+      1: 100020
+    second: OrcLDigit11
+  - first:
+      1: 100022
+    second: OrcLDigit11 1
+  - first:
+      1: 100024
+    second: OrcLDigit21
+  - first:
+      1: 100026
+    second: OrcLDigit22
+  - first:
+      1: 100028
+    second: OrcLFoot
+  - first:
+      1: 100030
+    second: OrcLForearm
+  - first:
+      1: 100032
+    second: OrcLPalm
+  - first:
+      1: 100034
+    second: OrcLThigh
+  - first:
+      1: 100036
+    second: OrcLUpperarm
+  - first:
+      1: 100038
+    second: OrcMouth
+  - first:
+      1: 100040
+    second: OrcNeck
+  - first:
+      1: 100042
+    second: OrcPelvis
+  - first:
+      1: 100044
+    second: OrcRCalf
+  - first:
+      1: 100046
+    second: OrcRCollarbone
+  - first:
+      1: 100048
+    second: OrcRDigit11
+  - first:
+      1: 100050
+    second: OrcRDigit11 1
+  - first:
+      1: 100052
+    second: OrcRDigit21
+  - first:
+      1: 100054
+    second: OrcRDigit22
+  - first:
+      1: 100056
+    second: OrcRFoot
+  - first:
+      1: 100058
+    second: OrcRForearm
+  - first:
+      1: 100060
+    second: OrcRibcage
+  - first:
+      1: 100062
+    second: OrcRPalm
+  - first:
+      1: 100064
+    second: OrcRThigh
+  - first:
+      1: 100066
+    second: OrcRUpperarm
+  - first:
+      1: 100068
+    second: OrcSpine1
+  - first:
+      1: 100070
+    second: OrcSpine2
+  - first:
+      1: 100072
+    second: OrcSpine3
+  - first:
+      4: 400000
+    second: Orc
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Orc_club
+  - first:
+      4: 400006
+    second: Orc_helmet
+  - first:
+      4: 400008
+    second: Orc_shield
+  - first:
+      4: 400010
+    second: Orccloth1
+  - first:
+      4: 400012
+    second: Orccloth2
+  - first:
+      4: 400014
+    second: OrcHead
+  - first:
+      4: 400016
+    second: OrcLCalf
+  - first:
+      4: 400018
+    second: OrcLCollarbone
+  - first:
+      4: 400020
+    second: OrcLDigit11
+  - first:
+      4: 400022
+    second: OrcLDigit11 1
+  - first:
+      4: 400024
+    second: OrcLDigit21
+  - first:
+      4: 400026
+    second: OrcLDigit22
+  - first:
+      4: 400028
+    second: OrcLFoot
+  - first:
+      4: 400030
+    second: OrcLForearm
+  - first:
+      4: 400032
+    second: OrcLPalm
+  - first:
+      4: 400034
+    second: OrcLThigh
+  - first:
+      4: 400036
+    second: OrcLUpperarm
+  - first:
+      4: 400038
+    second: OrcMouth
+  - first:
+      4: 400040
+    second: OrcNeck
+  - first:
+      4: 400042
+    second: OrcPelvis
+  - first:
+      4: 400044
+    second: OrcRCalf
+  - first:
+      4: 400046
+    second: OrcRCollarbone
+  - first:
+      4: 400048
+    second: OrcRDigit11
+  - first:
+      4: 400050
+    second: OrcRDigit11 1
+  - first:
+      4: 400052
+    second: OrcRDigit21
+  - first:
+      4: 400054
+    second: OrcRDigit22
+  - first:
+      4: 400056
+    second: OrcRFoot
+  - first:
+      4: 400058
+    second: OrcRForearm
+  - first:
+      4: 400060
+    second: OrcRibcage
+  - first:
+      4: 400062
+    second: OrcRPalm
+  - first:
+      4: 400064
+    second: OrcRThigh
+  - first:
+      4: 400066
+    second: OrcRUpperarm
+  - first:
+      4: 400068
+    second: OrcSpine1
+  - first:
+      4: 400070
+    second: OrcSpine2
+  - first:
+      4: 400072
+    second: OrcSpine3
+  - first:
+      23: 2300000
+    second: Orc_club
+  - first:
+      23: 2300002
+    second: Orc_helmet
+  - first:
+      23: 2300004
+    second: Orc_shield
+  - first:
+      33: 3300000
+    second: Orc_club
+  - first:
+      33: 3300002
+    second: Orc_helmet
+  - first:
+      33: 3300004
+    second: Orc_shield
+  - first:
+      43: 4300000
+    second: Orc_shield
+  - first:
+      43: 4300002
+    second: Orc_club
+  - first:
+      43: 4300004
+    second: Orc_helmet
+  - first:
+      43: 4300006
+    second: Orc
+  - first:
+      74: 7400000
+    second: idle
+  - first:
+      74: 7400002
+    second: idle_break
+  - first:
+      74: 7400004
+    second: hit
+  - first:
+      74: 7400006
+    second: attack1
+  - first:
+      74: 7400008
+    second: attack2
+  - first:
+      74: 7400010
+    second: die
+  - first:
+      74: 7400012
+    second: jump
+  - first:
+      74: 7400014
+    second: walk
+  - first:
+      74: 7400016
+    second: block
+  - first:
+      74: 7400018
+    second: death
+  - first:
+      74: 7400020
+    second: walk
+  - first:
+      74: 7400022
+    second: run
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Orc
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -110,7 +310,7 @@ ModelImporter:
       name: Orc_01
     second: {fileID: 2100000, guid: c2bd88348c7998c48ab4fe5a11bc5ff0, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -128,8 +328,8 @@ ModelImporter:
       in animation file:\n\t'OrcRibcage' : rotation error = 18.305248 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'OrcSpine3' is inbetween humanoid transforms
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'OrcSpine3' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'OrcRibcage' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'OrcMouth'
       has translation animation that will be discarded.\n"
@@ -148,6 +348,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 80
       wrapMode: 2
@@ -156,7 +357,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -176,6 +377,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle_break
       takeName: Take 001
+      internalID: 0
       firstFrame: 80
       lastFrame: 150
       wrapMode: 0
@@ -204,6 +406,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 150
       lastFrame: 170
       wrapMode: 0
@@ -232,6 +435,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 170
       lastFrame: 200
       wrapMode: 0
@@ -260,6 +464,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 200
       lastFrame: 235
       wrapMode: 0
@@ -288,6 +493,7 @@ ModelImporter:
     - serializedVersion: 16
       name: block
       takeName: Take 001
+      internalID: 0
       firstFrame: 235
       lastFrame: 255
       wrapMode: 0
@@ -316,6 +522,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 400
       lastFrame: 445
       wrapMode: 0
@@ -344,6 +551,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: Take 001
+      internalID: 0
       firstFrame: 290
       lastFrame: 350
       wrapMode: 0
@@ -358,9 +566,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -372,6 +580,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 460
       lastFrame: 495
       wrapMode: 2
@@ -400,6 +609,7 @@ ModelImporter:
     - serializedVersion: 16
       name: run
       takeName: Take 001
+      internalID: 0
       firstFrame: 500
       lastFrame: 530
       wrapMode: 2
@@ -408,7 +618,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -425,32 +635,39 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -459,10 +676,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: OrcPelvis
       humanName: Hips
@@ -881,13 +1098,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
   assetBundleName: 

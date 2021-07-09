@@ -1,158 +1,458 @@
 fileFormatVersion: 2
 guid: 49a87cabeabd3be4695304691aba9d65
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: bone_elf arch_botton00
-    100002: bone_elf arch_botton01
-    100004: bone_elf arch_main
-    100006: bone_elf arch_top00
-    100008: bone_elf arch_top01
-    100010: ctrl_goblin arch_arrow
-    100012: ctrl_goblin arch_main
-    100014: dark elf
-    100016: dark elf_arch
-    100018: dark elf_helmet
-    100020: dark elf_quiver
-    100022: dark elf_staff
-    100024: //RootNode
-    100026: Elf_weaponL
-    100028: Elf_weaponR
-    100030: Elfcloth_back
-    100032: Elfcloth_front
-    100034: Elfhair1
-    100036: Elfhair2
-    100038: Elfhair3
-    100040: ElfHead
-    100042: ElfLCalf
-    100044: ElfLCollarbone
-    100046: ElfLDigit11
-    100048: ElfLDigit11 1
-    100050: ElfLDigit12
-    100052: ElfLDigit13
-    100054: ElfLDigit21
-    100056: ElfLDigit22
-    100058: ElfLDigit23
-    100060: ElfLDigit31
-    100062: ElfLDigit32
-    100064: ElfLDigit33
-    100066: ElfLFoot
-    100068: ElfLForearm
-    100070: ElfLPalm
-    100072: ElfLThigh
-    100074: ElfLUpperarm
-    100076: Elfmouth
-    100078: ElfNeck
-    100080: ElfPelvis
-    100082: ElfRCalf
-    100084: ElfRCollarbone
-    100086: ElfRDigit11
-    100088: ElfRDigit11 1
-    100090: ElfRDigit12
-    100092: ElfRDigit13
-    100094: ElfRDigit21
-    100096: ElfRDigit22
-    100098: ElfRDigit23
-    100100: ElfRDigit31
-    100102: ElfRDigit32
-    100104: ElfRDigit33
-    100106: ElfRFoot
-    100108: ElfRForearm
-    100110: ElfRibcage
-    100112: ElfRPalm
-    100114: ElfRThigh
-    100116: ElfRUpperarm
-    100118: ElfSpine1
-    100120: ElfSpine2
-    100122: ElfSpine3
-    400000: bone_elf arch_botton00
-    400002: bone_elf arch_botton01
-    400004: bone_elf arch_main
-    400006: bone_elf arch_top00
-    400008: bone_elf arch_top01
-    400010: ctrl_goblin arch_arrow
-    400012: ctrl_goblin arch_main
-    400014: dark elf
-    400016: dark elf_arch
-    400018: dark elf_helmet
-    400020: dark elf_quiver
-    400022: dark elf_staff
-    400024: //RootNode
-    400026: Elf_weaponL
-    400028: Elf_weaponR
-    400030: Elfcloth_back
-    400032: Elfcloth_front
-    400034: Elfhair1
-    400036: Elfhair2
-    400038: Elfhair3
-    400040: ElfHead
-    400042: ElfLCalf
-    400044: ElfLCollarbone
-    400046: ElfLDigit11
-    400048: ElfLDigit11 1
-    400050: ElfLDigit12
-    400052: ElfLDigit13
-    400054: ElfLDigit21
-    400056: ElfLDigit22
-    400058: ElfLDigit23
-    400060: ElfLDigit31
-    400062: ElfLDigit32
-    400064: ElfLDigit33
-    400066: ElfLFoot
-    400068: ElfLForearm
-    400070: ElfLPalm
-    400072: ElfLThigh
-    400074: ElfLUpperarm
-    400076: Elfmouth
-    400078: ElfNeck
-    400080: ElfPelvis
-    400082: ElfRCalf
-    400084: ElfRCollarbone
-    400086: ElfRDigit11
-    400088: ElfRDigit11 1
-    400090: ElfRDigit12
-    400092: ElfRDigit13
-    400094: ElfRDigit21
-    400096: ElfRDigit22
-    400098: ElfRDigit23
-    400100: ElfRDigit31
-    400102: ElfRDigit32
-    400104: ElfRDigit33
-    400106: ElfRFoot
-    400108: ElfRForearm
-    400110: ElfRibcage
-    400112: ElfRPalm
-    400114: ElfRThigh
-    400116: ElfRUpperarm
-    400118: ElfSpine1
-    400120: ElfSpine2
-    400122: ElfSpine3
-    2300000: dark elf_helmet
-    2300002: dark elf_quiver
-    2300004: dark elf_staff
-    3300000: dark elf_helmet
-    3300002: dark elf_quiver
-    3300004: dark elf_staff
-    4300000: dark elf_staff
-    4300002: dark elf_helmet
-    4300004: dark elf_quiver
-    4300006: dark elf
-    4300008: dark elf_arch
-    7400000: idle
-    7400002: idle_break
-    7400004: hit
-    7400006: death
-    7400008: attack
-    7400010: special
-    7400012: jump
-    7400014: bow
-    7400016: walk
-    7400018: run
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: dark elf
-    13700002: dark elf_arch
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: bone_elf arch_botton00
+  - first:
+      1: 100002
+    second: bone_elf arch_botton01
+  - first:
+      1: 100004
+    second: bone_elf arch_main
+  - first:
+      1: 100006
+    second: bone_elf arch_top00
+  - first:
+      1: 100008
+    second: bone_elf arch_top01
+  - first:
+      1: 100010
+    second: ctrl_goblin arch_arrow
+  - first:
+      1: 100012
+    second: ctrl_goblin arch_main
+  - first:
+      1: 100014
+    second: dark elf
+  - first:
+      1: 100016
+    second: dark elf_arch
+  - first:
+      1: 100018
+    second: dark elf_helmet
+  - first:
+      1: 100020
+    second: dark elf_quiver
+  - first:
+      1: 100022
+    second: dark elf_staff
+  - first:
+      1: 100024
+    second: //RootNode
+  - first:
+      1: 100026
+    second: Elf_weaponL
+  - first:
+      1: 100028
+    second: Elf_weaponR
+  - first:
+      1: 100030
+    second: Elfcloth_back
+  - first:
+      1: 100032
+    second: Elfcloth_front
+  - first:
+      1: 100034
+    second: Elfhair1
+  - first:
+      1: 100036
+    second: Elfhair2
+  - first:
+      1: 100038
+    second: Elfhair3
+  - first:
+      1: 100040
+    second: ElfHead
+  - first:
+      1: 100042
+    second: ElfLCalf
+  - first:
+      1: 100044
+    second: ElfLCollarbone
+  - first:
+      1: 100046
+    second: ElfLDigit11
+  - first:
+      1: 100048
+    second: ElfLDigit11 1
+  - first:
+      1: 100050
+    second: ElfLDigit12
+  - first:
+      1: 100052
+    second: ElfLDigit13
+  - first:
+      1: 100054
+    second: ElfLDigit21
+  - first:
+      1: 100056
+    second: ElfLDigit22
+  - first:
+      1: 100058
+    second: ElfLDigit23
+  - first:
+      1: 100060
+    second: ElfLDigit31
+  - first:
+      1: 100062
+    second: ElfLDigit32
+  - first:
+      1: 100064
+    second: ElfLDigit33
+  - first:
+      1: 100066
+    second: ElfLFoot
+  - first:
+      1: 100068
+    second: ElfLForearm
+  - first:
+      1: 100070
+    second: ElfLPalm
+  - first:
+      1: 100072
+    second: ElfLThigh
+  - first:
+      1: 100074
+    second: ElfLUpperarm
+  - first:
+      1: 100076
+    second: Elfmouth
+  - first:
+      1: 100078
+    second: ElfNeck
+  - first:
+      1: 100080
+    second: ElfPelvis
+  - first:
+      1: 100082
+    second: ElfRCalf
+  - first:
+      1: 100084
+    second: ElfRCollarbone
+  - first:
+      1: 100086
+    second: ElfRDigit11
+  - first:
+      1: 100088
+    second: ElfRDigit11 1
+  - first:
+      1: 100090
+    second: ElfRDigit12
+  - first:
+      1: 100092
+    second: ElfRDigit13
+  - first:
+      1: 100094
+    second: ElfRDigit21
+  - first:
+      1: 100096
+    second: ElfRDigit22
+  - first:
+      1: 100098
+    second: ElfRDigit23
+  - first:
+      1: 100100
+    second: ElfRDigit31
+  - first:
+      1: 100102
+    second: ElfRDigit32
+  - first:
+      1: 100104
+    second: ElfRDigit33
+  - first:
+      1: 100106
+    second: ElfRFoot
+  - first:
+      1: 100108
+    second: ElfRForearm
+  - first:
+      1: 100110
+    second: ElfRibcage
+  - first:
+      1: 100112
+    second: ElfRPalm
+  - first:
+      1: 100114
+    second: ElfRThigh
+  - first:
+      1: 100116
+    second: ElfRUpperarm
+  - first:
+      1: 100118
+    second: ElfSpine1
+  - first:
+      1: 100120
+    second: ElfSpine2
+  - first:
+      1: 100122
+    second: ElfSpine3
+  - first:
+      4: 400000
+    second: bone_elf arch_botton00
+  - first:
+      4: 400002
+    second: bone_elf arch_botton01
+  - first:
+      4: 400004
+    second: bone_elf arch_main
+  - first:
+      4: 400006
+    second: bone_elf arch_top00
+  - first:
+      4: 400008
+    second: bone_elf arch_top01
+  - first:
+      4: 400010
+    second: ctrl_goblin arch_arrow
+  - first:
+      4: 400012
+    second: ctrl_goblin arch_main
+  - first:
+      4: 400014
+    second: dark elf
+  - first:
+      4: 400016
+    second: dark elf_arch
+  - first:
+      4: 400018
+    second: dark elf_helmet
+  - first:
+      4: 400020
+    second: dark elf_quiver
+  - first:
+      4: 400022
+    second: dark elf_staff
+  - first:
+      4: 400024
+    second: //RootNode
+  - first:
+      4: 400026
+    second: Elf_weaponL
+  - first:
+      4: 400028
+    second: Elf_weaponR
+  - first:
+      4: 400030
+    second: Elfcloth_back
+  - first:
+      4: 400032
+    second: Elfcloth_front
+  - first:
+      4: 400034
+    second: Elfhair1
+  - first:
+      4: 400036
+    second: Elfhair2
+  - first:
+      4: 400038
+    second: Elfhair3
+  - first:
+      4: 400040
+    second: ElfHead
+  - first:
+      4: 400042
+    second: ElfLCalf
+  - first:
+      4: 400044
+    second: ElfLCollarbone
+  - first:
+      4: 400046
+    second: ElfLDigit11
+  - first:
+      4: 400048
+    second: ElfLDigit11 1
+  - first:
+      4: 400050
+    second: ElfLDigit12
+  - first:
+      4: 400052
+    second: ElfLDigit13
+  - first:
+      4: 400054
+    second: ElfLDigit21
+  - first:
+      4: 400056
+    second: ElfLDigit22
+  - first:
+      4: 400058
+    second: ElfLDigit23
+  - first:
+      4: 400060
+    second: ElfLDigit31
+  - first:
+      4: 400062
+    second: ElfLDigit32
+  - first:
+      4: 400064
+    second: ElfLDigit33
+  - first:
+      4: 400066
+    second: ElfLFoot
+  - first:
+      4: 400068
+    second: ElfLForearm
+  - first:
+      4: 400070
+    second: ElfLPalm
+  - first:
+      4: 400072
+    second: ElfLThigh
+  - first:
+      4: 400074
+    second: ElfLUpperarm
+  - first:
+      4: 400076
+    second: Elfmouth
+  - first:
+      4: 400078
+    second: ElfNeck
+  - first:
+      4: 400080
+    second: ElfPelvis
+  - first:
+      4: 400082
+    second: ElfRCalf
+  - first:
+      4: 400084
+    second: ElfRCollarbone
+  - first:
+      4: 400086
+    second: ElfRDigit11
+  - first:
+      4: 400088
+    second: ElfRDigit11 1
+  - first:
+      4: 400090
+    second: ElfRDigit12
+  - first:
+      4: 400092
+    second: ElfRDigit13
+  - first:
+      4: 400094
+    second: ElfRDigit21
+  - first:
+      4: 400096
+    second: ElfRDigit22
+  - first:
+      4: 400098
+    second: ElfRDigit23
+  - first:
+      4: 400100
+    second: ElfRDigit31
+  - first:
+      4: 400102
+    second: ElfRDigit32
+  - first:
+      4: 400104
+    second: ElfRDigit33
+  - first:
+      4: 400106
+    second: ElfRFoot
+  - first:
+      4: 400108
+    second: ElfRForearm
+  - first:
+      4: 400110
+    second: ElfRibcage
+  - first:
+      4: 400112
+    second: ElfRPalm
+  - first:
+      4: 400114
+    second: ElfRThigh
+  - first:
+      4: 400116
+    second: ElfRUpperarm
+  - first:
+      4: 400118
+    second: ElfSpine1
+  - first:
+      4: 400120
+    second: ElfSpine2
+  - first:
+      4: 400122
+    second: ElfSpine3
+  - first:
+      23: 2300000
+    second: dark elf_helmet
+  - first:
+      23: 2300002
+    second: dark elf_quiver
+  - first:
+      23: 2300004
+    second: dark elf_staff
+  - first:
+      33: 3300000
+    second: dark elf_helmet
+  - first:
+      33: 3300002
+    second: dark elf_quiver
+  - first:
+      33: 3300004
+    second: dark elf_staff
+  - first:
+      43: 4300000
+    second: dark elf_staff
+  - first:
+      43: 4300002
+    second: dark elf_helmet
+  - first:
+      43: 4300004
+    second: dark elf_quiver
+  - first:
+      43: 4300006
+    second: dark elf
+  - first:
+      43: 4300008
+    second: dark elf_arch
+  - first:
+      74: 7400000
+    second: idle
+  - first:
+      74: 7400002
+    second: idle_break
+  - first:
+      74: 7400004
+    second: hit
+  - first:
+      74: 7400006
+    second: death
+  - first:
+      74: 7400008
+    second: attack
+  - first:
+      74: 7400010
+    second: special
+  - first:
+      74: 7400012
+    second: jump
+  - first:
+      74: 7400014
+    second: bow
+  - first:
+      74: 7400016
+    second: walk
+  - first:
+      74: 7400018
+    second: run
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: dark elf
+  - first:
+      137: 13700002
+    second: dark elf_arch
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -160,7 +460,7 @@ ModelImporter:
       name: elf_dark_01
     second: {fileID: 2100000, guid: 02609b165b3a9cd4dbd0cb51f7957568, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -175,13 +475,13 @@ ModelImporter:
       does not match position in animation file:\n\t'ElfLDigit11 1' : position error
       = 16.202648 mm\n\t'ElfLDigit12' : position error = 34.563107 mm\n\t'ElfRDigit12'
       : position error = 7.877476 mm\n\t'Elfmouth' : position error = 7.574466 mm\nAvatar
-      Rig Configuration mis-match. Inbetween bone rotation in configuration does not
-      match rotation in animation file:\n\t'ElfSpine3' : rotation error = 3.646686
+      Rig Configuration mis-match. Inbetween bone rotation in configuration does
+      not match rotation in animation file:\n\t'ElfSpine3' : rotation error = 3.646686
       deg\n\t'ElfRibcage' : rotation error = 0.731850 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'ElfSpine3' is inbetween humanoid transforms
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'ElfSpine3' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'ElfRibcage' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'Elfmouth'
       has translation animation that will be discarded.\n"
@@ -200,6 +500,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 2
@@ -208,7 +509,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -228,6 +529,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle_break
       takeName: Take 001
+      internalID: 0
       firstFrame: 50
       lastFrame: 110
       wrapMode: 0
@@ -256,6 +558,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 110
       lastFrame: 130
       wrapMode: 0
@@ -284,6 +587,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: Take 001
+      internalID: 0
       firstFrame: 130
       lastFrame: 160
       wrapMode: 0
@@ -298,9 +602,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -312,6 +616,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack
       takeName: Take 001
+      internalID: 0
       firstFrame: 170
       lastFrame: 195
       wrapMode: 0
@@ -340,6 +645,7 @@ ModelImporter:
     - serializedVersion: 16
       name: special
       takeName: Take 001
+      internalID: 0
       firstFrame: 200
       lastFrame: 235
       wrapMode: 0
@@ -368,6 +674,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 245
       lastFrame: 290
       wrapMode: 0
@@ -396,6 +703,7 @@ ModelImporter:
     - serializedVersion: 16
       name: bow
       takeName: Take 001
+      internalID: 0
       firstFrame: 300
       lastFrame: 355
       wrapMode: 0
@@ -424,6 +732,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 400
       lastFrame: 435
       wrapMode: 2
@@ -432,7 +741,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -452,6 +761,7 @@ ModelImporter:
     - serializedVersion: 16
       name: run
       takeName: Take 001
+      internalID: 0
       firstFrame: 450
       lastFrame: 473
       wrapMode: 2
@@ -460,7 +770,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -477,32 +787,39 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -511,10 +828,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: ElfPelvis
       humanName: Hips
@@ -1154,13 +1471,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
   assetBundleName: 

@@ -4,244 +4,185 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Reference the Unity Analytics namespace
-using UnityEngine.Analytics;
-
 public class GameController : MonoBehaviour {
 
-	private float seconds;
-	private float minutes;
-	protected vp_FPPlayerEventHandler m_Player = null;
-	private float health;
-	private int experience;
-	public GameObject playerPrefab;
-
+	// Player & Player Stats
 	[SerializeField]
 	private GameObject mainPlayer;
-	string playerName;
-	protected MyBehaviour events;
 
-	vp_SimpleHUD getHealthMultiplier;
-	private int playerHP;
-	private int runonce = 0;
+	private bool bPlayerDead;
+	private float seconds;
+	private float minutes;
+	private vp_PlayerDamageHandler m_Stats;
 
-	[SerializeField]
+	// Grid config
 	private int difficulty;
-
 	private int Xsize;
 	private int Ysize;
-
 	[SerializeField]
 	private int rowSize;
 	[SerializeField]
 	private int columnSize;
-
 	[SerializeField]
 	private Grid grid;
+	private bool bGridInitialized;
 
-	private bool bGridInitialized = false;
+	private bool gameOver;
 
-	private bool bSwap = true;
-	public static GameController control;
+	private float timer;
+	#region Singleton
 
-
+	public static GameController instance;
 	void Awake()
 	{
-		if (control == null)
-		{
-			DontDestroyOnLoad(gameObject);
-			control = this;
-		}
-		else if (control != this)
-		{
-			Destroy(gameObject);
-		}
+		if(instance != null)
+        {
+			Destroy(this);
+			return;
+        }
+		instance = this;
 	}
-	void Start() {
 
+    #endregion
+
+    void Start() 
+	{
+		timer = 0;
+		gameOver = false;
+		bPlayerDead = false;
+		bGridInitialized = false;
+		difficulty = 1;
 		columnSize = 10;
 		rowSize = 5;
 
-		/*if (SceneManager.GetActiveScene ().buildIndex == 1) {
-			Debug.Log ("Level 1, reset params");
-			PlayerPrefs.SetInt ("experience", 0);
-			PlayerPrefs.SetInt ("health", 0);
-		} else {
-			Debug.Log ("Loading level: " + SceneManager.GetActiveScene ().buildIndex);
-		}*/
+		PlayerPrefs.SetInt ("experience", 0);
+		PlayerPrefs.SetInt ("health", 0);
 
+		m_Stats = mainPlayer.GetComponent<vp_PlayerDamageHandler>();
 	}
 
 	void Update()
 	{
 
-		if(bGridInitialized == false)
+		if(!bGridInitialized)
         {
-			bGridInitialized = true;
-			Debug.Log("Building a grid, difficulty: " + difficulty);
-
-
-
-
-
-			// Reset UFPS player
-			GameObject[] deletePlayer = GameObject.FindGameObjectsWithTag("Player");
-			for(int i=0;i<deletePlayer.Length;i++)
-            {
-				//Destroy(deletePlayer[i]);
-            }
-
-			if (deletePlayer.Length > 1)
-			{
-             /*   if (bSwap)
-                {
-					GameObject.Destroy(deletePlayer[1]);
-				}
-				else
-                {
-					GameObject.Destroy(deletePlayer[0]);
-				}
-				bSwap = !bSwap;*/
-			}
-
-			//mainPlayer = Instantiate(playerPrefab);
-			//mainPlayer.name = "NEW PLAYER";
-
-			//mainPlayer = GameObject.FindGameObjectWithTag("Player");
-			//GameObject temp = GameObject.FindGameObjectWithTag("GridGO");
-
-			//grid = temp.GetComponent<Grid>();
-			Xsize = rowSize * 10;
-			Ysize = columnSize * 10;
-			grid.CreateGrid(Xsize, Ysize);
-			Debug.Log("Finished Grid");
-
-			playerName = PlayerPrefs.GetString("name").ToString();
-			getHealthMultiplier = mainPlayer.GetComponent<vp_SimpleHUD>();
-			m_Player = mainPlayer.GetComponent<vp_FPPlayerEventHandler>();
-
-			grid.SetPlayerStartPoint(mainPlayer);
-
+			InitGrid();
 		}
-		Debug.Log("helllllooooo");
-		//grid.FindPath();
+		UpdateTime();
 
-		if (mainPlayer == null) 
+		if (Input.GetKeyDown ("z")) 
 		{
-
-		}
-		/*
-		if (SceneManager.GetActiveScene ().buildIndex == 1 && runonce == 0 ) 
-		{
-			Debug.Log ("Level 1, reset params");
-			//PlayerPrefs.SetInt ("experience", 0);
-			//PlayerPrefs.SetInt ("health", 0);
-			runonce = 1;
-		}*/
-
-
-		playerHP = (int)(m_Player.Health.Get() * getHealthMultiplier.HealthMultiplier);
-		minutes = (int)(Time.timeSinceLevelLoad / 60f);
-		seconds = (int)(Time.timeSinceLevelLoad % 60f);
-		experience = PlayerPrefs.GetInt ("experience");
-
-		if (Input.GetKeyDown ("z")) {
-			//events.MissionCompleted (minutes,experience);
-			//Debug.Log("hello");
 			LevelFinished ();
 		}
+
+		if(bPlayerDead)
+        {
+			if (Input.GetKeyDown("r"))
+			{
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			}
+		}
+
+		//if (Input.GetKeyDown(KeyCode.Escape))
+		if(Input.GetKeyDown("`"))
+		{
+			SceneManager.LoadScene(0);
+		}
+
+		//if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown("m"))
+		{
+			grid.ShowPath();
+		}
+
+		// SFX
+		if (m_Stats.CurrentHealth <= 3)
+		{
+			AudioManager.instance.Play("Damaged");
+		}
+	/*	else if (m_Stats.CurrentHealth <= 8)
+		{
+			AudioManager.instance.Play("Hit");
+		}*/
+	}
+	private void UpdateTime()
+    {
+		timer += Time.deltaTime;
+		minutes = (int)(timer / 60f);
+		seconds = (int)(timer % 60f);
+	}
+	private void InitGrid()
+    {
+		timer = 0;
+		bGridInitialized = true;
+		Debug.Log("Building grid, difficulty: " + difficulty);
+		Xsize = rowSize * 10;
+		Ysize = columnSize * 10;
+		grid.CreateGrid(Xsize, Ysize, difficulty);
+		Debug.Log("Finished Grid");
+		grid.SetPlayerStartPoint(mainPlayer);
+		// TODO
+		//grid.FindPath();
 	}
 
 	public void LevelFinished()
 	{
-		//Save ();
-		//UpdateAnalytics ();
-		//Debug.Break ();
-
-		//int active_scene = SceneManager.GetActiveScene().buildIndex;
-		/*Debug.Log ("Scene: " + active_scene);
-		if (active_scene == 6) 
-		{
-			SceneManager.LoadScene (1);
-		} 
-		else
-		{*/
-			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-			difficulty++;
-			rowSize += 2;
-			columnSize += 2;
-			bGridInitialized = false;
-		//		vp_Timer.CancelAll();
-		/*vp_Timer.DestroyAll();
-		GameObject[] deletePlayer = GameObject.FindGameObjectsWithTag("Player");
-		for (int i = 0; i < deletePlayer.Length; i++)
-		{
-			Destroy(deletePlayer[i]);
-		}*/
+		Save();
+		difficulty++;
+		rowSize += 2;
+		columnSize += 2;
+		bGridInitialized = false;
 		grid.Reset();
 
-		
-		//GameObject.Destroy(GameObject.FindGameObjectWithTag("Destroy"));
-		/*if (bSwap)
+		if(difficulty>25)
         {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
-		}else
-        {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-		}
-		bSwap = !bSwap;
-		*/
-		//string thisScene = SceneManager.GetActiveScene().name;
-		//SceneManager.UnloadSceneAsync(thisScene);
-//		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		//SceneManager.LoadScene(thisScene);
-		//}
-
+			gameOver = true;
+        }
 	}
 
 	private void Save()
 	{
-		//Debug.Log ("Updating Save Time: " + Time.fixedTime);
-		PlayerPrefs.SetFloat("minutes", minutes);
-		PlayerPrefs.SetFloat("seconds", seconds);
-		PlayerPrefs.SetFloat ("experience", experience);
-		PlayerPrefs.SetInt("health", playerHP);
+		PlayerPrefs.SetInt("health", (int)m_Stats.CurrentHealth);
+		int totalSeconds = (int)minutes * 60 + (int)seconds;
+		int saveValue = difficulty - 1;
+		int oldScore = PlayerPrefs.GetInt("times" + saveValue);
+		
+		if(totalSeconds<oldScore)
+        {
+			PlayerPrefs.SetInt("times" + saveValue, totalSeconds);
+		}
 	}
 		
-
-	private void UpdateAnalytics()
+	private void OnGUI()
 	{
-		Debug.Log ("Updating analytics");
-		Analytics.CustomEvent("beatLevel", new Dictionary<string, object>
-			{
-				{ "seconds", (minutes*60)+seconds},
-				{ "health", playerHP},
-				{ "name", playerName},
-				{ "experience", experience}
-			});
-	}
-		
-	void OnGUI()
-	{
-		//GUI.Label (new Rect (10, 10, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
-		//GUI.Label (new Rect (10, 10, 100, 30), playerName);
-		//GUI.Label (new Rect (10, 40, 100, 30), "Health: " + playerHP);
-		//GUI.Label (new Rect (10, 70, 100, 30), "Experience: " + PlayerPrefs.GetInt("experience"));
-	//	GUI.Label (new Rect (10, 100, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
-		GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
-		GUI.Label(new Rect(10, 40, 100, 30), "Experience: " + experience);
+		int level = difficulty + 1;
+		GUI.Label(new Rect(10, 10, 100, 30), "Level: " + level);
+//		GUI.Label(new Rect(10, 40, 100, 30), "Experience: " + Experience);
 		GUI.Label(new Rect(10, 70, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
+		if(bPlayerDead)
+        {
+			GUI.Label(new Rect(500, 300, 170, 30), "You ran to level " + level);
+			GUI.Label(new Rect(500, 330, 170, 30), "Press R to run again " + difficulty);
+			GUI.Label(new Rect(500, 360, 170, 30), "Press Escape to run away " + difficulty);
+		}
 	}
 
-	// Event handlers (events added through PlayerEventHandlers
-	void OnMessage_EnemyDied()
+	public void EnemyDied(GameObject deadEnemy)
 	{
-		Debug.Log ("Enemy has died.");
+		Debug.Log(deadEnemy.name + " has died.");
 
-		experience++;
-		PlayerPrefs.SetInt ("experience", experience);
+		//Experience += deadEnemy.GetComponent<Enemy>().ExperienceValue;
+
+		//PlayerPrefs.SetInt("experience", Experience);
 	}
 
+	public void PlayerDead()
+    {
+		bPlayerDead = true;
+	}
+
+	public void SecretTileFound()
+    {
+
+    }
 }

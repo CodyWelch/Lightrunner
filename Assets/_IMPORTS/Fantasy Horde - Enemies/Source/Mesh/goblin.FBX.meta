@@ -1,105 +1,299 @@
 fileFormatVersion: 2
 guid: 0ca85a670c3262443a828c408d92543f
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: bip_hordeHead
-    100002: bip_hordeHeadBone001
-    100004: bip_hordeHeadBone002
-    100006: bip_hordeLCalf
-    100008: bip_hordeLCollarbone
-    100010: bip_hordeLDigit11
-    100012: bip_hordeLDigit21
-    100014: bip_hordeLFoot
-    100016: bip_hordeLForearm
-    100018: bip_hordeLPalm
-    100020: bip_hordeLThigh
-    100022: bip_hordeLUpperarm
-    100024: bip_hordeNeck1
-    100026: bip_hordeNeck2
-    100028: bip_hordePelvis
-    100030: bip_hordeRCalf
-    100032: bip_hordeRCollarbone
-    100034: bip_hordeRDigit11
-    100036: bip_hordeRDigit21
-    100038: bip_hordeRFoot
-    100040: bip_hordeRForearm
-    100042: bip_hordeRibcage
-    100044: bip_hordeRPalm
-    100046: bip_hordeRThigh
-    100048: bip_hordeRUpperarm
-    100050: bip_hordeSpine1
-    100052: bip_hordeSpine2
-    100054: bon_gob_war_cloth00
-    100056: bon_gob_war_cloth01
-    100058: bon_gob_war_jaw
-    100060: Goblin
-    100062: //RootNode
-    100064: Goblin_helmet
-    100066: Goblin_shield
-    100068: Goblin_sword
-    400000: bip_hordeHead
-    400002: bip_hordeHeadBone001
-    400004: bip_hordeHeadBone002
-    400006: bip_hordeLCalf
-    400008: bip_hordeLCollarbone
-    400010: bip_hordeLDigit11
-    400012: bip_hordeLDigit21
-    400014: bip_hordeLFoot
-    400016: bip_hordeLForearm
-    400018: bip_hordeLPalm
-    400020: bip_hordeLThigh
-    400022: bip_hordeLUpperarm
-    400024: bip_hordeNeck1
-    400026: bip_hordeNeck2
-    400028: bip_hordePelvis
-    400030: bip_hordeRCalf
-    400032: bip_hordeRCollarbone
-    400034: bip_hordeRDigit11
-    400036: bip_hordeRDigit21
-    400038: bip_hordeRFoot
-    400040: bip_hordeRForearm
-    400042: bip_hordeRibcage
-    400044: bip_hordeRPalm
-    400046: bip_hordeRThigh
-    400048: bip_hordeRUpperarm
-    400050: bip_hordeSpine1
-    400052: bip_hordeSpine2
-    400054: bon_gob_war_cloth00
-    400056: bon_gob_war_cloth01
-    400058: bon_gob_war_jaw
-    400060: Goblin
-    400062: //RootNode
-    400064: Goblin_helmet
-    400066: Goblin_shield
-    400068: Goblin_sword
-    2300000: Goblin_helmet
-    2300002: Goblin_shield
-    2300004: Goblin_sword
-    3300000: Goblin_helmet
-    3300002: Goblin_shield
-    3300004: Goblin_sword
-    4300000: Goblin_shield
-    4300002: Goblin_sword
-    4300004: Goblin_helmet
-    4300006: Goblin
-    7400000: idle
-    7400002: idle_break
-    7400004: hit
-    7400006: death
-    7400008: attack1
-    7400010: sttack2
-    7400012: block
-    7400014: jump
-    7400016: death
-    7400018: walk
-    7400020: run
-    7400022: Take 00110
-    7400024: Take 00111
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: Goblin
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: bip_hordeHead
+  - first:
+      1: 100002
+    second: bip_hordeHeadBone001
+  - first:
+      1: 100004
+    second: bip_hordeHeadBone002
+  - first:
+      1: 100006
+    second: bip_hordeLCalf
+  - first:
+      1: 100008
+    second: bip_hordeLCollarbone
+  - first:
+      1: 100010
+    second: bip_hordeLDigit11
+  - first:
+      1: 100012
+    second: bip_hordeLDigit21
+  - first:
+      1: 100014
+    second: bip_hordeLFoot
+  - first:
+      1: 100016
+    second: bip_hordeLForearm
+  - first:
+      1: 100018
+    second: bip_hordeLPalm
+  - first:
+      1: 100020
+    second: bip_hordeLThigh
+  - first:
+      1: 100022
+    second: bip_hordeLUpperarm
+  - first:
+      1: 100024
+    second: bip_hordeNeck1
+  - first:
+      1: 100026
+    second: bip_hordeNeck2
+  - first:
+      1: 100028
+    second: bip_hordePelvis
+  - first:
+      1: 100030
+    second: bip_hordeRCalf
+  - first:
+      1: 100032
+    second: bip_hordeRCollarbone
+  - first:
+      1: 100034
+    second: bip_hordeRDigit11
+  - first:
+      1: 100036
+    second: bip_hordeRDigit21
+  - first:
+      1: 100038
+    second: bip_hordeRFoot
+  - first:
+      1: 100040
+    second: bip_hordeRForearm
+  - first:
+      1: 100042
+    second: bip_hordeRibcage
+  - first:
+      1: 100044
+    second: bip_hordeRPalm
+  - first:
+      1: 100046
+    second: bip_hordeRThigh
+  - first:
+      1: 100048
+    second: bip_hordeRUpperarm
+  - first:
+      1: 100050
+    second: bip_hordeSpine1
+  - first:
+      1: 100052
+    second: bip_hordeSpine2
+  - first:
+      1: 100054
+    second: bon_gob_war_cloth00
+  - first:
+      1: 100056
+    second: bon_gob_war_cloth01
+  - first:
+      1: 100058
+    second: bon_gob_war_jaw
+  - first:
+      1: 100060
+    second: Goblin
+  - first:
+      1: 100062
+    second: //RootNode
+  - first:
+      1: 100064
+    second: Goblin_helmet
+  - first:
+      1: 100066
+    second: Goblin_shield
+  - first:
+      1: 100068
+    second: Goblin_sword
+  - first:
+      4: 400000
+    second: bip_hordeHead
+  - first:
+      4: 400002
+    second: bip_hordeHeadBone001
+  - first:
+      4: 400004
+    second: bip_hordeHeadBone002
+  - first:
+      4: 400006
+    second: bip_hordeLCalf
+  - first:
+      4: 400008
+    second: bip_hordeLCollarbone
+  - first:
+      4: 400010
+    second: bip_hordeLDigit11
+  - first:
+      4: 400012
+    second: bip_hordeLDigit21
+  - first:
+      4: 400014
+    second: bip_hordeLFoot
+  - first:
+      4: 400016
+    second: bip_hordeLForearm
+  - first:
+      4: 400018
+    second: bip_hordeLPalm
+  - first:
+      4: 400020
+    second: bip_hordeLThigh
+  - first:
+      4: 400022
+    second: bip_hordeLUpperarm
+  - first:
+      4: 400024
+    second: bip_hordeNeck1
+  - first:
+      4: 400026
+    second: bip_hordeNeck2
+  - first:
+      4: 400028
+    second: bip_hordePelvis
+  - first:
+      4: 400030
+    second: bip_hordeRCalf
+  - first:
+      4: 400032
+    second: bip_hordeRCollarbone
+  - first:
+      4: 400034
+    second: bip_hordeRDigit11
+  - first:
+      4: 400036
+    second: bip_hordeRDigit21
+  - first:
+      4: 400038
+    second: bip_hordeRFoot
+  - first:
+      4: 400040
+    second: bip_hordeRForearm
+  - first:
+      4: 400042
+    second: bip_hordeRibcage
+  - first:
+      4: 400044
+    second: bip_hordeRPalm
+  - first:
+      4: 400046
+    second: bip_hordeRThigh
+  - first:
+      4: 400048
+    second: bip_hordeRUpperarm
+  - first:
+      4: 400050
+    second: bip_hordeSpine1
+  - first:
+      4: 400052
+    second: bip_hordeSpine2
+  - first:
+      4: 400054
+    second: bon_gob_war_cloth00
+  - first:
+      4: 400056
+    second: bon_gob_war_cloth01
+  - first:
+      4: 400058
+    second: bon_gob_war_jaw
+  - first:
+      4: 400060
+    second: Goblin
+  - first:
+      4: 400062
+    second: //RootNode
+  - first:
+      4: 400064
+    second: Goblin_helmet
+  - first:
+      4: 400066
+    second: Goblin_shield
+  - first:
+      4: 400068
+    second: Goblin_sword
+  - first:
+      23: 2300000
+    second: Goblin_helmet
+  - first:
+      23: 2300002
+    second: Goblin_shield
+  - first:
+      23: 2300004
+    second: Goblin_sword
+  - first:
+      33: 3300000
+    second: Goblin_helmet
+  - first:
+      33: 3300002
+    second: Goblin_shield
+  - first:
+      33: 3300004
+    second: Goblin_sword
+  - first:
+      43: 4300000
+    second: Goblin_shield
+  - first:
+      43: 4300002
+    second: Goblin_sword
+  - first:
+      43: 4300004
+    second: Goblin_helmet
+  - first:
+      43: 4300006
+    second: Goblin
+  - first:
+      74: 7400000
+    second: idle
+  - first:
+      74: 7400002
+    second: idle_break
+  - first:
+      74: 7400004
+    second: hit
+  - first:
+      74: 7400006
+    second: death
+  - first:
+      74: 7400008
+    second: attack1
+  - first:
+      74: 7400010
+    second: sttack2
+  - first:
+      74: 7400012
+    second: block
+  - first:
+      74: 7400014
+    second: jump
+  - first:
+      74: 7400016
+    second: death
+  - first:
+      74: 7400018
+    second: walk
+  - first:
+      74: 7400020
+    second: run
+  - first:
+      74: 7400022
+    second: Take 00110
+  - first:
+      74: 7400024
+    second: Take 00111
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Goblin
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -107,7 +301,7 @@ ModelImporter:
       name: goblin_01
     second: {fileID: 2100000, guid: b863cf92be705694ab660ce41e6bebad, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -120,15 +314,15 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
       does not match position in animation file:\n\t'bip_hordeHead' : position error
-      = 4.581471 mm\nAvatar Rig Configuration mis-match. Inbetween bone rotation in
-      configuration does not match rotation in animation file:\n\t'bip_hordeRibcage'
+      = 4.581471 mm\nAvatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'bip_hordeRibcage'
       : rotation error = 1.894696 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'bip_hordeRibcage' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'bip_hordeNeck1' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'bip_hordeNeck2'
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'bip_hordeRibcage' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'bip_hordeNeck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bip_hordeNeck2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -145,6 +339,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 2
@@ -153,7 +348,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -173,6 +368,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle_break
       takeName: Take 001
+      internalID: 0
       firstFrame: 50
       lastFrame: 100
       wrapMode: 0
@@ -201,6 +397,7 @@ ModelImporter:
     - serializedVersion: 16
       name: block
       takeName: Take 001
+      internalID: 0
       firstFrame: 100
       lastFrame: 120
       wrapMode: 0
@@ -229,6 +426,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 120
       lastFrame: 145
       wrapMode: 0
@@ -257,6 +455,7 @@ ModelImporter:
     - serializedVersion: 16
       name: sttack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 145
       lastFrame: 175
       wrapMode: 0
@@ -285,6 +484,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hit
       takeName: Take 001
+      internalID: 0
       firstFrame: 180
       lastFrame: 200
       wrapMode: 0
@@ -313,6 +513,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump
       takeName: Take 001
+      internalID: 0
       firstFrame: 250
       lastFrame: 293
       wrapMode: 0
@@ -341,6 +542,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: Take 001
+      internalID: 0
       firstFrame: 210
       lastFrame: 235
       wrapMode: 0
@@ -355,9 +557,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -369,6 +571,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 300
       lastFrame: 330
       wrapMode: 2
@@ -377,7 +580,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -397,6 +600,7 @@ ModelImporter:
     - serializedVersion: 16
       name: run
       takeName: Take 001
+      internalID: 0
       firstFrame: 350
       lastFrame: 375
       wrapMode: 2
@@ -405,7 +609,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -422,32 +626,39 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -456,10 +667,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: bip_hordePelvis
       humanName: Hips
@@ -830,13 +1041,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 1
   userData: 
   assetBundleName: 
