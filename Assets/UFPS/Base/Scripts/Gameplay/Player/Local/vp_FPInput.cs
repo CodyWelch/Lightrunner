@@ -381,7 +381,14 @@ public class vp_FPInput : vp_Component
 
 	}
 
-
+	public void Unpause()
+    {
+		UpdateCursorLock();
+#if UNITY_EDITOR && UNITY_5
+				vp_Utility.LockCursor = false;
+#endif
+		GameController.instance.ShowPauseMenu();
+    }
 	/// <summary>
 	/// this method handles toggling between mouse pointer and
 	/// firing modes. it can be used to deal with screen regions
@@ -451,7 +458,8 @@ public class vp_FPInput : vp_Component
 				vp_Utility.LockCursor = false;
 			else
 #endif
-			vp_Utility.LockCursor = !vp_Utility.LockCursor;
+			//vp_Utility.LockCursor = !vp_Utility.LockCursor;
+			GameController.instance.ShowPauseMenu();
 		}
 
 	}

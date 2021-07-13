@@ -15,6 +15,13 @@ public class GameController : MonoBehaviour {
 	private float minutes;
 	private vp_PlayerDamageHandler m_Stats;
 
+	[SerializeField]
+	private GameObject FinalUI;
+	[SerializeField]
+	private GameObject PauseUI;
+	[SerializeField]
+	private GameObject ControlsUI;
+
 	// Grid config
 	private int difficulty;
 	private int Xsize;
@@ -83,10 +90,10 @@ public class GameController : MonoBehaviour {
 			}
 		}
 
-		//if (Input.GetKeyDown(KeyCode.Escape))
-		if(Input.GetKeyDown("`"))
+		if (Input.GetKeyDown(KeyCode.Escape))
+		//if(Input.GetKeyDown("`"))
 		{
-			SceneManager.LoadScene(0);
+			//SceneManager.LoadScene(0);
 		}
 
 		//if (Input.GetKeyDown(KeyCode.Escape))
@@ -134,12 +141,53 @@ public class GameController : MonoBehaviour {
 		bGridInitialized = false;
 		grid.Reset();
 
-		if(difficulty>25)
+		if(difficulty>20)
         {
-			gameOver = true;
-        }
+			GameOver();
+		}
 	}
 
+	public void ReturnToMainMenu()
+	{
+		SceneManager.LoadScene(0);
+	}
+	public void Continue()
+    {
+
+	}
+
+	public void ShowPauseMenu()
+    {
+		if (PauseUI.activeSelf)
+		{
+			PauseUI.SetActive(false);
+			vp_Utility.LockCursor = true;
+		}
+		else
+        {
+			vp_Utility.LockCursor = false;
+			PauseUI.SetActive(true);
+		}
+		mainPlayer.GetComponent<vp_FPInput>().MouseCursorForced = !mainPlayer.GetComponent<vp_FPInput>().MouseCursorForced;
+
+	}
+
+	public void ShowControlsUI()
+    {
+		PauseUI.SetActive(false);
+		ControlsUI.SetActive(true);
+	}
+
+	public void ReturnToPauseMenuUI()
+    {
+		PauseUI.SetActive(true);
+		ControlsUI.SetActive(false);
+	}
+
+	private void GameOver()
+    {
+
+    }
 	private void Save()
 	{
 		PlayerPrefs.SetInt("health", (int)m_Stats.CurrentHealth);
@@ -155,7 +203,7 @@ public class GameController : MonoBehaviour {
 		
 	private void OnGUI()
 	{
-		int level = difficulty + 1;
+		int level = difficulty;
 		GUI.Label(new Rect(10, 10, 100, 30), "Level: " + level);
 //		GUI.Label(new Rect(10, 40, 100, 30), "Experience: " + Experience);
 		GUI.Label(new Rect(10, 70, 100, 30), "Time: " + minutes.ToString("0000") + ":" + seconds.ToString("00"));
