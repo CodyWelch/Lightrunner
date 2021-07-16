@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	private float seconds;
 	private float minutes;
 	private vp_PlayerDamageHandler m_Stats;
+	private vp_PlayerEventHandler m_Events;
 
 	[SerializeField]
 	private GameObject FinalUI;
@@ -62,10 +63,10 @@ public class GameController : MonoBehaviour {
 		columnSize = 10;
 		rowSize = 5;
 
-		PlayerPrefs.SetInt ("experience", 0);
 		PlayerPrefs.SetInt ("health", 0);
 
 		m_Stats = mainPlayer.GetComponent<vp_PlayerDamageHandler>();
+		m_Events = mainPlayer.GetComponent<vp_PlayerEventHandler>();
 	}
 
 	void Update()
@@ -91,12 +92,10 @@ public class GameController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Escape))
-		//if(Input.GetKeyDown("`"))
 		{
 			//SceneManager.LoadScene(0);
 		}
 
-		//if (Input.GetKeyDown(KeyCode.Escape))
 		if (Input.GetKeyDown("m"))
 		{
 			grid.ShowPath();
@@ -123,13 +122,14 @@ public class GameController : MonoBehaviour {
 		timer = 0;
 		bGridInitialized = true;
 		Debug.Log("Building grid, difficulty: " + difficulty);
+
 		Xsize = rowSize * 10;
 		Ysize = columnSize * 10;
 		grid.CreateGrid(Xsize, Ysize, difficulty);
 		Debug.Log("Finished Grid");
+
 		grid.SetPlayerStartPoint(mainPlayer);
-		// TODO
-		//grid.FindPath();
+
 	}
 
 	public void LevelFinished()
@@ -150,10 +150,6 @@ public class GameController : MonoBehaviour {
 	public void ReturnToMainMenu()
 	{
 		SceneManager.LoadScene(0);
-	}
-	public void Continue()
-    {
-
 	}
 
 	public void ShowPauseMenu()
@@ -188,14 +184,18 @@ public class GameController : MonoBehaviour {
     {
 
     }
+
 	private void Save()
 	{
 		PlayerPrefs.SetInt("health", (int)m_Stats.CurrentHealth);
 		int totalSeconds = (int)minutes * 60 + (int)seconds;
 		int saveValue = difficulty - 1;
 		int oldScore = PlayerPrefs.GetInt("times" + saveValue);
-		
-		if(totalSeconds<oldScore)
+		int currentWeaponAmmo = m_Events.CurrentWeaponAmmoCount.Get();
+
+		PlayerPrefs.SetInt("currentWeaponAmmo", (int)currentWeaponAmmo);
+
+		if (totalSeconds<oldScore)
         {
 			PlayerPrefs.SetInt("times" + saveValue, totalSeconds);
 		}
@@ -218,10 +218,6 @@ public class GameController : MonoBehaviour {
 	public void EnemyDied(GameObject deadEnemy)
 	{
 		Debug.Log(deadEnemy.name + " has died.");
-
-		//Experience += deadEnemy.GetComponent<Enemy>().ExperienceValue;
-
-		//PlayerPrefs.SetInt("experience", Experience);
 	}
 
 	public void PlayerDead()

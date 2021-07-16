@@ -69,26 +69,26 @@ public class Grid : MonoBehaviour {
 	public int tile_count;
 
 	// player values
-	private int saved_health;
+	private int savedHealth;
 
-	// default tile values
-	// 10% obstacles
+	// default chances of spawning specific tile
+	// 25% obstacles
 	private int obstacleMin = 0;
-	private int obstacleMax = 10;
+	private int obstacleMax = 70;
 
 	// 2% health
-	private int healthMin = 10;
-	private int healthMax = 12;
+	private int healthMin = 72;
+	private int healthMax = 75;
 
 	// 10% ammo
-	private int ammoMin = 12;
-	private int ammoMax = 22;
+	private int ammoMin = 77;
+	private int ammoMax = 80;
 
-	// 83% common
-	private int commonMin = 22;
+	// 63% common
+	private int commonMin = 80;
 	private int commonMax = 100;
 
-	// 5% max pickups
+	// Max tile pickups = 5% of total tiles
 	private int pickupsMax = 5;
 	private int pickupsCurrent = 0;
 
@@ -98,21 +98,20 @@ public class Grid : MonoBehaviour {
 	public List<Node> path;
 	public void CreateGrid(int gridWorldSizeX, int gridWorldSizeY, int difficulty) 
 	{
-		//player = GameObject.FindGameObjectWithTag("Player");
 
 		gridWorldSize.x = gridWorldSizeX;
 		gridWorldSize.y = gridWorldSizeY;
 
-		parent_tiles = Instantiate(new GameObject());
+		parent_tiles = new GameObject();
 		parent_tiles.name = "Tiles";
 
-		parent_lights = Instantiate(new GameObject());
+		parent_lights = new GameObject();
 		parent_lights.name = "Lights";
 
-		parent_enemies = Instantiate(new GameObject());
+		parent_enemies = new GameObject();
 		parent_enemies.name = "Enemies";
 
-		parent_pickups = Instantiate(new GameObject());
+		parent_pickups = new GameObject();
 		parent_pickups.name = "Pickups";
 
 
@@ -120,35 +119,45 @@ public class Grid : MonoBehaviour {
 		gridSizeX = Mathf.RoundToInt(gridWorldSize.x/nodeDiameter);
 		gridSizeY = Mathf.RoundToInt(gridWorldSize.y/nodeDiameter);
 
-		saved_health = PlayerPrefs.GetInt("health");
-
-		Debug.Log("Health in grid: " + PlayerPrefs.GetInt("health"));
-		Debug.Log("Exp in grid: " + PlayerPrefs.GetInt("experience"));
 
 		pickupsMax += difficulty;
 
+		// Player affected values
+		savedHealth = PlayerPrefs.GetInt("health");
+		int previousAmmo = PlayerPrefs.GetInt("currentWeaponAmmo");
+		Debug.Log("Previous ammo: " + previousAmmo);
+
 		// Player needs health
-		/*if (saved_health <= 30) 
+		if (savedHealth <= 3) 
 		{
 			healthMax += 5;
 			ammoMin += 5;
 			ammoMax += 5;
 			commonMin += 5;
-		}*/
+		}
 
 		// Player needs ammo
-		/*if (saved_health <= 30) 
+		if (previousAmmo <= 10) 
 		{
 			ammoMax += 5;
 			commonMin += 5;
-		}*/
+		}
+
+
+		// Setup complete, build the grid
+
 		BuildGrid();
+
+		// Check that there is a path from the start tile tile to the final tile
 		FindPath();
 
-		// TODO
-		// make path
-		// shuffle path
-		// reset
+		// If there is no path, make one by finding a path that 
+		// ignores obstacle tiles and then exchanges the obstacle tiles on the path for common tiles
+		if(path==null)
+        {
+			Debug.Log("path is null");
+			MakePath();
+        }
 	}
 
 	private void BuildGrid() 
@@ -184,10 +193,6 @@ public class Grid : MonoBehaviour {
 				else {
 					int random_tile = Random.Range(0, 101);
 
-					// default:
-					// 10% chance of obstacle tile 
-					// 2% chance of health tile 
-					// 10% chance of ammo tile
 					// Remainder common tile
 					if (obstacleMin <= random_tile && random_tile < obstacleMax) {
 						CreateObstacleTile(worldPoint, x, y);
@@ -222,7 +227,7 @@ public class Grid : MonoBehaviour {
     {
 		// Bottom
 		border[0].transform.localScale = new Vector3(border[0].transform.localScale.x, border[0].transform.localScale.y, gridWorldSize.y);
-		border[0].transform.position = new Vector3((gridSizeX * 5), border[0].transform.position.y, border[0].transform.position.x);
+		border[0].transform.position = new Vector3((gridSizeX * 5), border[0].transform.position.y, border[0].transform.position.z);
 
 		// Right
 		border[1].transform.localScale = new Vector3(border[1].transform.localScale.x, border[1].transform.localScale.y, gridWorldSize.x);
@@ -235,7 +240,7 @@ public class Grid : MonoBehaviour {
 		// Top
 
 		border[3].transform.localScale = new Vector3(border[3].transform.localScale.x, border[3].transform.localScale.y, gridWorldSize.y);
-		border[3].transform.position = new Vector3((gridSizeX * -5), border[3].transform.position.y, border[3].transform.position.x);
+		border[3].transform.position = new Vector3((gridSizeX * -5), border[3].transform.position.y, border[3].transform.position.z);
 		
 	}
 
@@ -298,7 +303,7 @@ public class Grid : MonoBehaviour {
 		grid[x, y] = new Node(walkable, worldPoint, x, y, currentTile);
 		targetNode = grid[x, y];
 
-
+		Debug.Log("created final tile");
 		return currentTile;
 	}
 
@@ -527,13 +532,7 @@ public class Grid : MonoBehaviour {
 
 	public void FindPath()
 	{
-		//Vector3 startPos = tile_seeker.position;
-		//Vector3 targetPos = tile_target.position;
-
-		//Node startNode = NodeFromWorldPoint(tile_seeker.position);
-		//Node targetNode = NodeFromWorldPoint(tile_seeker.position);
-
-		
+		path = null;
 		List<Node> openSet = new List<Node>();
 		HashSet<Node> closedSet = new HashSet<Node>();
 		openSet.Add(startNode);
@@ -555,7 +554,7 @@ public class Grid : MonoBehaviour {
 
 			if (node == targetNode)
 			{
-				RetracePath(startNode, targetNode);
+				RetracePath(startNode, targetNode,false);
 				return;
 			}
 
@@ -580,19 +579,100 @@ public class Grid : MonoBehaviour {
 		}
 	}
 
-	private void RetracePath(Node startNode, Node targetNode)
+	private void RetracePath(Node startNode, Node targetNode,bool bNewPath)
 	{
 		List<Node> newPath = new List<Node>();
 		Node currentNode = targetNode;
 
 		while (currentNode != startNode)
 		{
+			if(bNewPath&& currentNode.walkable==false)
+            {
+
+				bool updatedNode = false;
+				currentNode.walkable = true;
+
+				// Get tile's world position
+				Vector3 worldPosition = currentNode.tile.transform.position;
+
+
+				for (int x = 0; x< gridSizeX;x++)
+                {
+					for(int y=0;y<gridSizeY;y++)
+                    {
+						if (currentNode == grid[x, y])
+                        {
+							Debug.Log("Destroying " + currentNode.tile.name);
+							Destroy(currentNode.tile);
+
+							currentNode.tile = CreateCommonTile(worldPosition,x,y);
+							updatedNode = true;
+						}
+					}
+                }
+
+				if (updatedNode == false)
+                {
+					Debug.LogWarning("failed to updated grid");
+                }
+			}
+
+			
 			newPath.Add(currentNode);
 			currentNode = currentNode.parent;
 		}
 		newPath.Reverse();
 
 		path = newPath;
+	}
+
+	private void MakePath()
+    {
+
+		List<Node> openSet = new List<Node>();
+		HashSet<Node> closedSet = new HashSet<Node>();
+		openSet.Add(startNode);
+
+		while (openSet.Count > 0)
+		{
+			Node node = openSet[0];
+			for (int i = 1; i < openSet.Count; i++)
+			{
+				if (openSet[i].fCost < node.fCost || openSet[i].fCost == node.fCost)
+				{
+					if (openSet[i].hCost < node.hCost)
+						node = openSet[i];
+				}
+			}
+
+			openSet.Remove(node);
+			closedSet.Add(node);
+
+			if (node == targetNode)
+			{
+				RetracePath(startNode, targetNode,true);
+				return;
+			}
+
+			foreach (Node neighbour in GetNeighbours(node))
+			{
+				if (closedSet.Contains(neighbour))
+				{
+					continue;
+				}
+
+				int newCostToNeighbour = node.gCost + GetDistance(node, neighbour);
+				if (newCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
+				{
+					neighbour.gCost = newCostToNeighbour;
+					neighbour.hCost = GetDistance(neighbour, targetNode);
+					neighbour.parent = node;
+
+					if (!openSet.Contains(neighbour))
+						openSet.Add(neighbour);
+				}
+			}
+		}
 	}
 	private int GetDistance(Node nodeA, Node nodeB)
 	{
